@@ -38,38 +38,6 @@
   <meta name="msapplication-TileImage" content="https://tranhpdung.github.io/assets/img/favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#000000">
   <link rel="stylesheet" href="assets/css/app.css">
-  <style>
-    
-            
-            #loading {
-                position: fixed;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                z-index: 1005;
-                background-color: rgba(10, 10, 10, 0.9);
-                overflow-y: scroll;
-            }
-            #loading-inner {
-                background-color: transparent;
-                border: none; 
-                overflow: hidden;
-                z-index: 1006;
-                padding: 0;
-                position: absolute;
-                width: 4em;
-                height: 4em;
-                top: calc(50% - 2em);
-                right: calc(50% - 2em);
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-              
-            }
-            
-      
-  </style>
 </head>
 
 <body>
@@ -1523,23 +1491,8 @@
     </div>
 
   </div>
-  <script src="assets/js/lib/jquery.min.js"></script>
   <script src="assets/js/app.js"></script>
-  <script>
-    var wait = function(id) {
-      $('#' + id).append('<div id="loading"><div id="loading-inner"><svg id="DulcieTran" data-name="DulcieTran" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="32" height="32" style="animation:spin 600ms infinite linear"><defs><style>@keyframes spin{0%{transform:rotate(320deg)}to{transform:rotate(680deg)}}.cls-1{fill:#b5485f}</style></defs><g xmlns="http://www.w3.org/2000/svg" class="logo-dulcietran"><path class="cls-1" d="M65 0v40a25 25 0 0 1-50 0v31.21A40 40 0 0 0 80 40V0z" fill="#b5485f"/><path class="cls-1" d="M40 0A40 40 0 0 0 0 40v40h15V40a25 25 0 0 1 50 0V8.79A39.79 39.79 0 0 0 40 0z" fill="#b5485f"/><circle class="cls-1" cx="40" cy="40" r="12.5" fill="#b5485f"/></g></svg></div></div>');
-    };
-    var done = function() {
-      $("#loading").hide();
-    };
-    $(document).on("ready", function() {
-      wait('mysite');
-      setTimeout(function() {
-        done();
-      }, 1800);
-    });
-
-  </script>
+  
 </body>
 
 </html>
