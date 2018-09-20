@@ -38,8 +38,11 @@
   <meta name="msapplication-TileImage" content="https://tranhpdung.github.io/assets/img/favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#000000">
   <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116077124-2"></script>
+  <script async src="//www.googletagmanager.com/gtag/js?id=UA-116077124-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -47,12 +50,6 @@
 
   gtag('config', 'UA-116077124-2');
 </script>
-
-
-
-</head>
-
-<body>
   <svg id="icon-sprite" class="hide">
 
     <symbol id="activity" viewBox="0 0 24 24">
@@ -1308,47 +1305,55 @@
 
   </svg>
   <div class="off-canvas-wrapper">
-    <div class="off-canvas position-right callout" id="offCanvas" data-off-canvas>
-      <div class="logo-brand lazyload">
-        <a href="index.html">
-          <svg id="logo-dc-top-2" class="logo-dc logo-dc-top align-self-middle" data-name="dulcie tran" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="30" height="30">
-            <title>Dulcie Tran</title>
-            <path fill="#fff" d="M65 0v40a25 25 0 0 1-50 0v31.21A40 40 0 0 0 80 40V0z" />
-            <path fill="#fff" d="M40 0A40 40 0 0 0 0 40v40h15V40a25 25 0 0 1 50 0V8.79A39.79 39.79 0 0 0 40 0z" />
-            <circle fill="#fff" cx="40" cy="40" r="12.5" />
-          </svg>
-          <span class="owner-name title-bar-title hide">Dulcie <strong>Tran</strong></span>
-          <h1 class="show-for-sr">Dulcieland – based in Saigon</h1>
-        </a>
+    <div class="off-canvas position-right" id="offCanvas" data-off-canvas data-transition="overlap">
+      <div class="header">
+        <div class="header-wrapper row">
+          <div class="logo-brand title-bar-left columns small-6 align-self-middle">
+            <a href="/" class="cell">
+              <svg id="logo-dc-top-2" class="logo-dc logo-dc-top align-self-middle" data-name="dulcie tran" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="30" height="30">
+                <title>Dulcie Tran</title>
+                <path fill="#fff" d="M65 0v40a25 25 0 0 1-50 0v31.21A40 40 0 0 0 80 40V0z" />
+                <path fill="#fff" d="M40 0A40 40 0 0 0 0 40v40h15V40a25 25 0 0 1 50 0V8.79A39.79 39.79 0 0 0 40 0z" />
+                <circle fill="#fff" cx="40" cy="40" r="12.5" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="title-bar-right columns small-6"><button class="button-icon" aria-label="Close menu" type="button" data-close>
+
+              <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 30 30" fill="#fff" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+                  <use xlink:href="#x" /></svg></span>
+            </button>
+          </div>
+        </div>
       </div>
-      <button class="close-button" aria-label="Close menu" type="button" data-close>
-        <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 30 30" fill="#fff" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
-            <use xlink:href="#x" /></svg></span>
-      </button>
       <!-- Menu -->
-      <ul class="platform-menu vertical menu text-center" role="menu">
-        <li role="menuitem" tabindex="0" class=""> <a href="index.html" tabindex="-1">Home</a> </li>
-        <li role="menuitem" tabindex="0"> <a href="branding.html" tabindex="-1">Branding</a>
-          <ul class="nested vertical menu " data-magellan>
-            <li role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0"><a href="#typography" tabindex="-1">Typography</a></li>
-            <li role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0"><a href="#colours" tabindex="-1">Colours</a></li>
-            <li role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0"><a href="#controls" tabindex="-1">Controls</a></li>
-            <li role="menuitem" tabindex="0" role="menuitem" tabindex="0"><a href="#form-samples" tabindex="-1">Form</a></li>
-            <li role="menuitem" tabindex="0"><a href="#icons" tabindex="-1">Icons</a></li>
+      <div class="row">
+        <div class="small-12">
+          <ul class="platform-menu vertical menu text-center" role="menu">
+            <li role="menuitem" tabindex="0" class=""> <a href="/" tabindex="-1">Home</a> </li>
+            <li role="menuitem" tabindex="0"> <a href="branding.html" tabindex="-1">Branding</a>
+              <ul class="nested vertical menu " data-magellan>
+                <li role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0"><a href="#typography" tabindex="-1">Typography</a></li>
+                <li role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0"><a href="#colours" tabindex="-1">Colours</a></li>
+                <li role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0"><a href="#controls" tabindex="-1">Controls</a></li>
+                <li role="menuitem" tabindex="0" role="menuitem" tabindex="0"><a href="#form-samples" tabindex="-1">Form</a></li>
+                <li role="menuitem" tabindex="0"><a href="#icons" tabindex="-1">Icons</a></li>
+              </ul>
+
+            </li>
+            <li role="menuitem" tabindex="0" class=""> <a href="works.html" tabindex="-1">Works</a> </li>
+            <li role="menuitem" tabindex="0" class=""> <a href="contact.html" tabindex="-1">Contact</a> </li>
           </ul>
-
-        </li>
-        <li role="menuitem" tabindex="0" class=""> <a href="works.html" tabindex="-1">Works</a> </li>
-        <li role="menuitem" tabindex="0" class=""> <a href="contact.html" tabindex="-1">Contact</a> </li>
-      </ul>
-
+        </div>
+      </div>
     </div>
     <div class="off-canvas-content" data-off-canvas-content>
       <div id="wrapper-content" class="wrapper-content">
         <header id="main-header" class="header" data-sticky data-stick-to="top" data-margin-to="0" data-options="marginTop:0;" data-container-class="wrapper-content">
           <div class="header-wrapper row">
             <div class="logo-brand title-bar-left columns small-10 medium-4 large-3 align-self-middle">
-              <a href="index.html" class="cell">
+              <a href="/" class="cell">
                 <svg id="logo-dc-top-1" class="logo-dc logo-dc-top align-self-middle" data-name="dulcie tran" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="30" height="30"><title>Dulcie Tran</title><path fill="#fff" d="M65 0v40a25 25 0 0 1-50 0v31.21A40 40 0 0 0 80 40V0z"/><path fill="#fff" d="M40 0A40 40 0 0 0 0 40v40h15V40a25 25 0 0 1 50 0V8.79A39.79 39.79 0 0 0 40 0z"/><circle fill="#fff" cx="40" cy="40" r="12.5"/></svg>
                 <span class="owner-name title-bar-title text-uppercase text-nowrap align-self-middle">Dulcie <strong>Tran</strong></span>
                 <h1 class="show-for-sr">Dulcieland – based in Saigon</h1>
@@ -1361,7 +1366,7 @@
               </div>
         
               <ul class="platform-menu menu hide-for-small-only float-right" role="menu">
-                <li role="menuitem" tabindex="0" class=""> <a href="index.html" tabindex="-1">Home</a> </li>
+                <li role="menuitem" tabindex="0" class=""> <a href="/" tabindex="-1">Home</a> </li>
                 <li role="menuitem" tabindex="0" class=" active "> <a href="branding.html" tabindex="-1">Branding</a>
                   
                 </li>
@@ -1392,8 +1397,8 @@
             
                   <div class="grid-x grid-margin-x">
                     <div class="large-12 cell">
-                      <div id="typography" data-magellan-target="typography" class="secondary">
-                        <h4 class="separator-left">Typography</h4>
+                      <section id="typography" data-magellan-target="typography" class="section">
+                        <h4 class="title-section separator-left">Typography</h4>
                         <div class="grid-x grid-margin-x">
                           <div class="medium-4 cell">
                             <strong class="typo-sample">Gotham</strong>
@@ -1420,208 +1425,208 @@
                           </div>
                         </div>
             
-                      </div>
+                      </section>
             
-                      <div id="colours" data-magellan-target="colours" class="secondary">
-                        <h4 class="separator-left">Colours</h4>
-                          <div class="row medium-unstack">
-                            <div class="columns small-6 text-center margin-bottom-2">
-                              <div class="badge primary">#B5485F</div>
-                              <div class="badge-name">primary</div>
-                            </div>
-                            <div class="columns small-6 text-center margin-bottom-2">
-                              <div class="badge success">#42A270</div>
-                              <div class="badge-name">success</div>
-                            </div>
-                            <div class="columns small-6 text-center">
-                              <div class="badge alert">#FC6747</div>
-                              <div class="badge-name">alert</div>
-                            </div>
-                            <div class="columns small-6 text-center">
-                              <div class="badge warning">#E08541</div>
-                              <div class="badge-name">warning</div>
-                            </div>
-                          
+                      <section id="colours" data-magellan-target="colours" class="section">
+                        <h4 class="title-section separator-left">Colours</h4>
+                        <div class="row medium-unstack">
+                          <div class="columns small-6 text-center margin-bottom-2">
+                            <div class="badge primary">#B5485F</div>
+                            <div class="badge-name">primary</div>
+                          </div>
+                          <div class="columns small-6 text-center margin-bottom-2">
+                            <div class="badge success">#42A270</div>
+                            <div class="badge-name">success</div>
+                          </div>
+                          <div class="columns small-6 text-center">
+                            <div class="badge alert">#FC6747</div>
+                            <div class="badge-name">alert</div>
+                          </div>
+                          <div class="columns small-6 text-center">
+                            <div class="badge warning">#E08541</div>
+                            <div class="badge-name">warning</div>
+                          </div>
+            
                         </div>
-                      </div>
-                      <div id="controls" data-magellan-target="controls" class="secondary">
-                        <h4 class="separator-left">Controls</h4>
-                            <h5 class="hide-for-small-only">Large Buttons</h5>
-                            <div class="hide-for-small-only large button-group">
-                              <a href="#" class="large button">Primary Button</a>
-                              <a href="#" class="large success button">Success Button</a>
-                              <a href="#" class="large alert button">alert Button</a>
-                              <a href="#" class="large warning button">warning Button</a>
+                      </section>
+                      <section id="controls" data-magellan-target="controls" class="section">
+                        <h4 class="title-section separator-left">Controls</h4>
+                        <h5 class="hide-for-small-only">Large Buttons</h5>
+                        <div class="hide-for-small-only large button-group">
+                          <a href="#" class="large button">Primary Button</a>
+                          <a href="#" class="large success button">Success Button</a>
+                          <a href="#" class="large alert button">alert Button</a>
+                          <a href="#" class="large warning button">warning Button</a>
+                        </div>
+                        <div class="hide-for-small-only medium-6 large button-group">
+                          <a href="#" class="large hollow button">Primary Button</a>
+                          <a href="#" class="large success hollow button">Success Button</a>
+                          <a href="#" class="large alert hollow button">alert Button</a>
+                          <a href="#" class="large warning hollow button">warning Button</a>
+                        </div>
+                        <h5>Medium Buttons</h5>
+                        <div class="medium button-group">
+                          <a href="#" class="medium button">Primary Button</a><a href="#" class="medium success button">Success Button</a><a href="#" class="medium alert button">alert Button</a><a href="#" class="medium warning button">warning Button</a>
+                        </div>
+                        <div class="medium button-group">
+                          <a href="#" class="medium hollow button">Primary Button</a><a href="#" class="medium success hollow button">Success Button</a><a href="#" class="medium alert hollow button">alert Button</a><a href="#" class="medium warning hollow button">warning Button</a>
+                        </div>
+                        <h5>Small Buttons</h5>
+                        <div class="small button-group">
+                          <a href="#" class="small button">Primary Button</a><a href="#" class="small success button">Success Button</a><a href="#" class="small alert button">alert Button</a><a href="#" class="small warning button">warning Button</a>
+                        </div>
+                        <div class="small button-group">
+                          <a href="#" class="small hollow button">Primary Button</a><a href="#" class="small success hollow button">Success Button</a><a href="#" class="small alert hollow button">alert Button</a><a href="#" class="small warning hollow button">warning Button</a>
+                        </div>
+                        <h5>Group Buttons</h5>
+                        <div class="grid-x button-groups">
+                          <div class="hide-for-small-only cell small-12  medium-12 large-6">
+                            <div class="large button-group">
+                              <a class="button">Large</a>
+                              <a class="button">Button</a>
+                              <a class="button">Group</a>
                             </div>
-                            <div class="hide-for-small-only medium-6 large button-group">
-                              <a href="#" class="large hollow button">Primary Button</a>
-                              <a href="#" class="large success hollow button">Success Button</a>
-                              <a href="#" class="large alert hollow button">alert Button</a>
-                              <a href="#" class="large warning hollow button">warning Button</a>
+                          </div>
+                          <div class="hide-for-small-only cell small-12  medium-12 large-6">
+                            <div class="large button-group">
+                              <a class="secondary button">Large</a>
+                              <a class="secondary button">Button</a>
+                              <a class="secondary button">Group</a>
                             </div>
-                            <h5>Medium Buttons</h5>
+                          </div>
+                          <div class="hide-for-small-only cell small-12  medium-12 large-6">
                             <div class="medium button-group">
-                              <a href="#" class="medium button">Primary Button</a><a href="#" class="medium success button">Success Button</a><a href="#" class="medium alert button">alert Button</a><a href="#" class="medium warning button">warning Button</a>
+                              <a class="button">Medium</a>
+                              <a class="button">Button</a>
+                              <a class="button">Group</a>
                             </div>
+                          </div>
+                          <div class="cell small-12  medium-12 large-6">
                             <div class="medium button-group">
-                              <a href="#" class="medium hollow button">Primary Button</a><a href="#" class="medium success hollow button">Success Button</a><a href="#" class="medium alert hollow button">alert Button</a><a href="#" class="medium warning hollow button">warning Button</a>
+                              <a class="secondary button">Medium</a>
+                              <a class="secondary button">Button</a>
+                              <a class="secondary button">Group</a>
                             </div>
-                            <h5>Small Buttons</h5>
+                          </div>
+                          <div class="cell small-12  medium-12 large-6">
                             <div class="small button-group">
-                              <a href="#" class="small button">Primary Button</a><a href="#" class="small success button">Success Button</a><a href="#" class="small alert button">alert Button</a><a href="#" class="small warning button">warning Button</a>
+                              <a class="button">Small</a>
+                              <a class="button">Button</a>
+                              <a class="button">Group</a>
                             </div>
+                          </div>
+                          <div class="cell small-12  medium-12 large-6">
                             <div class="small button-group">
-                              <a href="#" class="small hollow button">Primary Button</a><a href="#" class="small success hollow button">Success Button</a><a href="#" class="small alert hollow button">alert Button</a><a href="#" class="small warning hollow button">warning Button</a>
+                              <a class="secondary button">Small</a>
+                              <a class="secondary button">Button</a>
+                              <a class="secondary button">Group</a>
                             </div>
-                            <h5>Group Buttons</h5>
-                            <div class="grid-x button-groups">
-                              <div class="hide-for-small-only cell small-12  medium-12 large-6">
-                                <div class="large button-group">
-                                  <a class="button">Large</a>
-                                  <a class="button">Button</a>
-                                  <a class="button">Group</a>
-                                </div>
-                              </div>
-                              <div class="hide-for-small-only cell small-12  medium-12 large-6">
-                                <div class="large button-group">
-                                  <a class="secondary button">Large</a>
-                                  <a class="secondary button">Button</a>
-                                  <a class="secondary button">Group</a>
-                                </div>
-                              </div>
-                              <div class="hide-for-small-only cell small-12  medium-12 large-6">
-                                <div class="medium button-group">
-                                  <a class="button">Medium</a>
-                                  <a class="button">Button</a>
-                                  <a class="button">Group</a>
-                                </div>
-                              </div>
-                              <div class="cell small-12  medium-12 large-6">
-                                <div class="medium button-group">
-                                  <a class="secondary button">Medium</a>
-                                  <a class="secondary button">Button</a>
-                                  <a class="secondary button">Group</a>
-                                </div>
-                              </div>
-                              <div class="cell small-12  medium-12 large-6">
-                                <div class="small button-group">
-                                  <a class="button">Small</a>
-                                  <a class="button">Button</a>
-                                  <a class="button">Group</a>
-                                </div>
-                              </div>
-                              <div class="cell small-12  medium-12 large-6">
-                                <div class="small button-group">
-                                  <a class="secondary button">Small</a>
-                                  <a class="secondary button">Button</a>
-                                  <a class="secondary button">Group</a>
-                                </div>
-                              </div>
+                          </div>
+                        </div>
+                        <h5>Split Buttons</h5>
+                        <div class="grid-x button-groups">
+                          <div class="hide-for-small-only cell small-12  medium-12 large-6">
+                            <div class="large button-group">
+                              <a class="button">Large Primary Action</a>
+                              <a class="dropdown button arrow-only">
+                                <span class="show-for-sr">Show menu</span>
+                              </a>
                             </div>
-                            <h5>Split Buttons</h5>
-                            <div class="grid-x button-groups">
-                              <div class="hide-for-small-only cell small-12  medium-12 large-6">
-                                <div class="large button-group">
-                                  <a class="button">Large Primary Action</a>
-                                  <a class="dropdown button arrow-only">
-                                    <span class="show-for-sr">Show menu</span>
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="hide-for-small-only cell small-12  medium-12 large-6">
-                                <div class="large button-group">
-                                  <a class="secondary button">Large Secondary Action</a>
-                                  <a class="dropdown secondary button arrow-only">
-                                    <span class="show-for-sr">Show menu</span>
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="hide-for-small-only cell small-12  medium-12 large-6">
-                                <div class="large button-group">
-                                  <a class="hollow button">Large Primary Action</a>
-                                  <a class="dropdown button arrow-only">
-                                    <span class="show-for-sr">Show menu</span>
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="hide-for-small-only cell small-12  medium-12 large-6">
-                                <div class="large button-group">
-                                  <a class="hollow secondary button">Large Secondary Action</a>
-                                  <a class="dropdown secondary button arrow-only">
-                                    <span class="show-for-sr">Show menu</span>
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="cell small-12  medium-12 large-6">
-                                <div class="medium button-group">
-                                  <a class="button">Medium Primary Action</a>
-                                  <a class="dropdown button arrow-only">
-                                    <span class="show-for-sr">Show menu</span>
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="cell small-12  medium-12 large-6">
-                                <div class="medium button-group">
-                                  <a class="secondary button">Medium Secondary Action</a>
-                                  <a class="dropdown secondary button arrow-only">
-                                    <span class="show-for-sr">Show menu</span>
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="cell small-12  medium-12 large-6">
-                                <div class="medium button-group">
-                                  <a class="hollow button">Medium Primary Action</a>
-                                  <a class="dropdown button arrow-only">
-                                    <span class="show-for-sr">Show menu</span>
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="cell small-12  medium-12 large-6">
-                                <div class="medium button-group">
-                                  <a class="hollow secondary button">Medium Secondary Action</a>
-                                  <a class="dropdown secondary button arrow-only">
-                                    <span class="show-for-sr">Show menu</span>
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="cell small-12  medium-12 large-6">
-                                <div class="small button-group">
-                                  <a class="button">Small Primary Action</a>
-                                  <a class="dropdown button arrow-only">
-                                    <span class="show-for-sr">Show menu</span>
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="cell small-12  medium-12 large-6">
-                                <div class="small button-group">
-                                  <a class="secondary button">Small Secondary Action</a>
-                                  <a class="dropdown secondary button arrow-only">
-                                    <span class="show-for-sr">Show menu</span>
-                                  </a>
-                                </div>
-                              </div>
+                          </div>
+                          <div class="hide-for-small-only cell small-12  medium-12 large-6">
+                            <div class="large button-group">
+                              <a class="secondary button">Large Secondary Action</a>
+                              <a class="dropdown secondary button arrow-only">
+                                <span class="show-for-sr">Show menu</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="hide-for-small-only cell small-12  medium-12 large-6">
+                            <div class="large button-group">
+                              <a class="hollow button">Large Primary Action</a>
+                              <a class="dropdown button arrow-only">
+                                <span class="show-for-sr">Show menu</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="hide-for-small-only cell small-12  medium-12 large-6">
+                            <div class="large button-group">
+                              <a class="hollow secondary button">Large Secondary Action</a>
+                              <a class="dropdown secondary button arrow-only">
+                                <span class="show-for-sr">Show menu</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="cell small-12  medium-12 large-6">
+                            <div class="medium button-group">
+                              <a class="button">Medium Primary Action</a>
+                              <a class="dropdown button arrow-only">
+                                <span class="show-for-sr">Show menu</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="cell small-12  medium-12 large-6">
+                            <div class="medium button-group">
+                              <a class="secondary button">Medium Secondary Action</a>
+                              <a class="dropdown secondary button arrow-only">
+                                <span class="show-for-sr">Show menu</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="cell small-12  medium-12 large-6">
+                            <div class="medium button-group">
+                              <a class="hollow button">Medium Primary Action</a>
+                              <a class="dropdown button arrow-only">
+                                <span class="show-for-sr">Show menu</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="cell small-12  medium-12 large-6">
+                            <div class="medium button-group">
+                              <a class="hollow secondary button">Medium Secondary Action</a>
+                              <a class="dropdown secondary button arrow-only">
+                                <span class="show-for-sr">Show menu</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="cell small-12  medium-12 large-6">
+                            <div class="small button-group">
+                              <a class="button">Small Primary Action</a>
+                              <a class="dropdown button arrow-only">
+                                <span class="show-for-sr">Show menu</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="cell small-12  medium-12 large-6">
+                            <div class="small button-group">
+                              <a class="secondary button">Small Secondary Action</a>
+                              <a class="dropdown secondary button arrow-only">
+                                <span class="show-for-sr">Show menu</span>
+                              </a>
+                            </div>
+                          </div>
             
-                              <div class="cell small-12  medium-12 large-6">
-                                <div class="small button-group">
-                                  <a class="hollow button">Small Primary Action</a>
-                                  <a class="dropdown button arrow-only">
-                                    <span class="show-for-sr">Show menu</span>
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="cell small-12  medium-12 large-6">
-                                <div class="small button-group">
-                                  <a class="hollow secondary button">Small Secondary Action</a>
-                                  <a class="dropdown secondary button arrow-only">
-                                    <span class="show-for-sr">Show menu</span>
-                                  </a>
-                                </div>
-                              </div>
+                          <div class="cell small-12  medium-12 large-6">
+                            <div class="small button-group">
+                              <a class="hollow button">Small Primary Action</a>
+                              <a class="dropdown button arrow-only">
+                                <span class="show-for-sr">Show menu</span>
+                              </a>
                             </div>
-                      </div>
+                          </div>
+                          <div class="cell small-12  medium-12 large-6">
+                            <div class="small button-group">
+                              <a class="hollow secondary button">Small Secondary Action</a>
+                              <a class="dropdown secondary button arrow-only">
+                                <span class="show-for-sr">Show menu</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
             
-                      <div id="form-samples" data-magellan-target="form-samples" class="secondary">
-                        <h4 class="separator-left">Form </h4>
+                      <section id="form-samples" data-magellan-target="form-samples" class="secondary">
+                        <h4 class="title-section separator-left">Form </h4>
                         <div class="grid-x grid-margin-x">
                           <div class="small-12 medium-4 large-4 callout cell">
                             <h5>Sign in</h5>
@@ -1684,9 +1689,9 @@
                             </form>
                           </div>
                         </div>
-                      </div>
-                      <div id="icons" data-magellan-target="icons" class="secondary">
-                        <h4 class="separator-left">Icons</h4>
+                      </section>
+                      <section id="icons" data-magellan-target="icons" class="section">
+                        <h4 class="title-section separator-left">Icons</h4>
                         <div class="row small-up-2 medium-up-2 large-up-4">
                           <div class="column callout align-middle grid-x grid-margin-x">
                             <svg class="small-4 cell feather">
@@ -1866,22 +1871,26 @@
                           </div>
             
                         </div>
-                      </div>
+                      </section>
             
                     </div>
                   </div>
                 </div>
-                <div class="small-12 cell branding-menu-container hide-for-small-only">
-                  <div id="branding-menu" data-sticky data-stick-to="bottom" data-container-class="document-container" class="branding-menu sticky-menu">
-                    
-                    <ul class="horizontal menu platform-menu row" data-magellan>
+                <div class="small-12 cell branding-menu-container hide-for-small-only"  data-closable>
+            
+            
+                  <div id="branding-menu" data-sticky data-stick-to="top" data-margin-top="4.25" data-container-class="document-container" class="branding-menu sticky-menu">
+            
+                    <ul class="horizontal menu platform-menu row" data-magellan data-offset="120">
                       <li class="column"><a class="separator-left" href="#typography">Typography</a></li>
                       <li class="column"><a class="separator-left" href="#colours">Colours</a></li>
                       <li class="column"><a class="separator-left" href="#controls">Controls</a></li>
                       <li class="column"><a class="separator-left" href="#form-samples">Form</a></li>
                       <li class="column"><a class="separator-left" href="#icons">Icons</a></li>
                     </ul>
-            
+                    <button class="rounded close-button" aria-label="Close Menu" type="button" data-close>
+                      <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-menu"><use xlink:href="#x" /></svg></span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1901,9 +1910,9 @@
           </div>
         </footer>
 
-        <div class="row   show-for-small-only " data-stick-to="bottom" data-check-every="0" data-margin-to="0" data-container-class="wrapper-content"><a class="button rounded button-back-to-top"  href="#wrapper-content" data-smooth-scroll><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 30 30" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-            <use xlink:href="#chevron-up" /></svg></a>
-          </div>
+        <div data-tooltip tabindex="1" title="Scroll to top" class="left row   show-for-small-only " data-stick-to="bottom" data-check-every="0" data-margin-to="0" data-container-class="wrapper-content"><a class="button small rounded button-back-to-top" href="#wrapper-content" data-smooth-scroll><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 30 30" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+              <use xlink:href="#chevron-up" /></svg></a>
+        </div>
       </div>
     </div>
     <script src="assets/js/app.js"></script>

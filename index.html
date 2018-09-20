@@ -38,8 +38,11 @@
   <meta name="msapplication-TileImage" content="https://tranhpdung.github.io/assets/img/favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#000000">
   <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116077124-2"></script>
+  <script async src="//www.googletagmanager.com/gtag/js?id=UA-116077124-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -47,12 +50,6 @@
 
   gtag('config', 'UA-116077124-2');
 </script>
-
-
-
-</head>
-
-<body>
   <svg id="icon-sprite" class="hide">
 
     <symbol id="activity" viewBox="0 0 24 24">
@@ -1308,47 +1305,55 @@
 
   </svg>
   <div class="off-canvas-wrapper">
-    <div class="off-canvas position-right callout" id="offCanvas" data-off-canvas>
-      <div class="logo-brand lazyload">
-        <a href="index.html">
-          <svg id="logo-dc-top-2" class="logo-dc logo-dc-top align-self-middle" data-name="dulcie tran" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="30" height="30">
-            <title>Dulcie Tran</title>
-            <path fill="#fff" d="M65 0v40a25 25 0 0 1-50 0v31.21A40 40 0 0 0 80 40V0z" />
-            <path fill="#fff" d="M40 0A40 40 0 0 0 0 40v40h15V40a25 25 0 0 1 50 0V8.79A39.79 39.79 0 0 0 40 0z" />
-            <circle fill="#fff" cx="40" cy="40" r="12.5" />
-          </svg>
-          <span class="owner-name title-bar-title hide">Dulcie <strong>Tran</strong></span>
-          <h1 class="show-for-sr">Dulcieland – based in Saigon</h1>
-        </a>
+    <div class="off-canvas position-right" id="offCanvas" data-off-canvas data-transition="overlap">
+      <div class="header">
+        <div class="header-wrapper row">
+          <div class="logo-brand title-bar-left columns small-6 align-self-middle">
+            <a href="/" class="cell">
+              <svg id="logo-dc-top-2" class="logo-dc logo-dc-top align-self-middle" data-name="dulcie tran" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="30" height="30">
+                <title>Dulcie Tran</title>
+                <path fill="#fff" d="M65 0v40a25 25 0 0 1-50 0v31.21A40 40 0 0 0 80 40V0z" />
+                <path fill="#fff" d="M40 0A40 40 0 0 0 0 40v40h15V40a25 25 0 0 1 50 0V8.79A39.79 39.79 0 0 0 40 0z" />
+                <circle fill="#fff" cx="40" cy="40" r="12.5" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="title-bar-right columns small-6"><button class="button-icon" aria-label="Close menu" type="button" data-close>
+
+              <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 30 30" fill="#fff" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+                  <use xlink:href="#x" /></svg></span>
+            </button>
+          </div>
+        </div>
       </div>
-      <button class="close-button" aria-label="Close menu" type="button" data-close>
-        <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 30 30" fill="#fff" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
-            <use xlink:href="#x" /></svg></span>
-      </button>
       <!-- Menu -->
-      <ul class="platform-menu vertical menu text-center" role="menu">
-        <li role="menuitem" tabindex="0" class=" active "> <a href="index.html" tabindex="-1">Home</a> </li>
-        <li role="menuitem" tabindex="0"> <a href="branding.html" tabindex="-1">Branding</a>
-          <ul class="nested vertical menu  hide " data-magellan>
-            <li role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0"><a href="#typography" tabindex="-1">Typography</a></li>
-            <li role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0"><a href="#colours" tabindex="-1">Colours</a></li>
-            <li role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0"><a href="#controls" tabindex="-1">Controls</a></li>
-            <li role="menuitem" tabindex="0" role="menuitem" tabindex="0"><a href="#form-samples" tabindex="-1">Form</a></li>
-            <li role="menuitem" tabindex="0"><a href="#icons" tabindex="-1">Icons</a></li>
+      <div class="row">
+        <div class="small-12">
+          <ul class="platform-menu vertical menu text-center" role="menu">
+            <li role="menuitem" tabindex="0" class=" active "> <a href="/" tabindex="-1">Home</a> </li>
+            <li role="menuitem" tabindex="0"> <a href="branding.html" tabindex="-1">Branding</a>
+              <ul class="nested vertical menu  hide " data-magellan>
+                <li role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0"><a href="#typography" tabindex="-1">Typography</a></li>
+                <li role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0"><a href="#colours" tabindex="-1">Colours</a></li>
+                <li role="menuitem" tabindex="0" role="menuitem" tabindex="0" role="menuitem" tabindex="0"><a href="#controls" tabindex="-1">Controls</a></li>
+                <li role="menuitem" tabindex="0" role="menuitem" tabindex="0"><a href="#form-samples" tabindex="-1">Form</a></li>
+                <li role="menuitem" tabindex="0"><a href="#icons" tabindex="-1">Icons</a></li>
+              </ul>
+
+            </li>
+            <li role="menuitem" tabindex="0" class=""> <a href="works.html" tabindex="-1">Works</a> </li>
+            <li role="menuitem" tabindex="0" class=""> <a href="contact.html" tabindex="-1">Contact</a> </li>
           </ul>
-
-        </li>
-        <li role="menuitem" tabindex="0" class=""> <a href="works.html" tabindex="-1">Works</a> </li>
-        <li role="menuitem" tabindex="0" class=""> <a href="contact.html" tabindex="-1">Contact</a> </li>
-      </ul>
-
+        </div>
+      </div>
     </div>
     <div class="off-canvas-content" data-off-canvas-content>
       <div id="wrapper-content" class="wrapper-content">
         <header id="main-header" class="header" data-sticky data-stick-to="top" data-margin-to="0" data-options="marginTop:0;" data-container-class="wrapper-content">
           <div class="header-wrapper row">
             <div class="logo-brand title-bar-left columns small-10 medium-4 large-3 align-self-middle">
-              <a href="index.html" class="cell">
+              <a href="/" class="cell">
                 <svg id="logo-dc-top-1" class="logo-dc logo-dc-top align-self-middle" data-name="dulcie tran" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="30" height="30"><title>Dulcie Tran</title><path fill="#fff" d="M65 0v40a25 25 0 0 1-50 0v31.21A40 40 0 0 0 80 40V0z"/><path fill="#fff" d="M40 0A40 40 0 0 0 0 40v40h15V40a25 25 0 0 1 50 0V8.79A39.79 39.79 0 0 0 40 0z"/><circle fill="#fff" cx="40" cy="40" r="12.5"/></svg>
                 <span class="owner-name title-bar-title text-uppercase text-nowrap align-self-middle">Dulcie <strong>Tran</strong></span>
                 <h1 class="show-for-sr">Dulcieland – based in Saigon</h1>
@@ -1361,7 +1366,7 @@
               </div>
         
               <ul class="platform-menu menu hide-for-small-only float-right" role="menu">
-                <li role="menuitem" tabindex="0" class=" active "> <a href="index.html" tabindex="-1">Home</a> </li>
+                <li role="menuitem" tabindex="0" class=" active "> <a href="/" tabindex="-1">Home</a> </li>
                 <li role="menuitem" tabindex="0" class=""> <a href="branding.html" tabindex="-1">Branding</a>
                   
                 </li>
@@ -1377,7 +1382,10 @@
             
             <figure class="hero-container grid-x grid-padding-x">
               <div class="hero-image-wrapper">
-                <div class="hero-image align-self-middle lazyload" data-interchange="[assets/img/flyer.jpg, small], [assets/img/felix.jpg, medium], [assets/img/marina_bay_1.jpg, large]"></div>
+                <div class="hero-image align-self-middle lazyload cell" data-interchange="[assets/img/flyer.jpg, small], [assets/img/felix.jpg, medium], [assets/img/marina_bay_1.jpg, large]">
+                  <img class="hero-image hero-image-hq align-bottom lazyload" data-interchange="[//drscdn.500px.org/photo/255984123/q%3D80_m%3D1500_k%3D1/v2?user_id=26368717&webp=true&sig=9373ef5191db26f15b06c106ceb25f47bab0f916b018149bc925c5d9cf319bc3, small], [//drscdn.500px.org/photo/263678903/q%3D80_m%3D2000_k%3D1/v2?user_id=26368717&amp;webp=true&amp;sig=be51e2ae18ecd2330077379ac208a47abcb1f309e3805ce4993e26cd738f9ce5, medium], [//drscdn.500px.org/photo/274146957/q%3D80_m%3D2000/v2?user_id=26368717&webp=true&sig=a48d077feed44a9b47f7f0fa77f30c1aa6e350f17e8d788af6e1f11e1764c725, large]"  alt="Dulcieland">
+                  
+                </div>
               </div>
             
               <figcaption class="hero-description grid-x grid-padding-x align-center-middle text-center">
@@ -1408,9 +1416,9 @@
           </div>
         </footer>
 
-        <div class="row  hide  " data-stick-to="bottom" data-check-every="0" data-margin-to="0" data-container-class="wrapper-content"><a class="button rounded button-back-to-top"  href="#wrapper-content" data-smooth-scroll><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 30 30" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-            <use xlink:href="#chevron-up" /></svg></a>
-          </div>
+        <div data-tooltip tabindex="1" title="Scroll to top" class="left row  hide  " data-stick-to="bottom" data-check-every="0" data-margin-to="0" data-container-class="wrapper-content"><a class="button small rounded button-back-to-top" href="#wrapper-content" data-smooth-scroll><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 30 30" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+              <use xlink:href="#chevron-up" /></svg></a>
+        </div>
       </div>
     </div>
     <script src="assets/js/app.js"></script>
