@@ -5,7 +5,7 @@
   "background_color": "#000000",
   "display": "browser",
   "Scope": "/",
-  "start_url": "http://dulcietran.com",
+  "start_url": "https://dulcietran.com",
   "icons": [
   {
    "src": "\/android-icon-36x36.png",
