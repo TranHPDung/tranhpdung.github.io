@@ -6,9 +6,9 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Dulcieland – based in Saigon. Hello! I am Dulcie Tran.">
+  <meta name="description" content="Dulcieland – based in Saigon. Gallery">
   <meta name="keywords" content="User Experience Designer, Frontend Developer, Saigonese, Vietnamese, Typography, Branding, Mobile Design, Web Design, Graphic Designer, Phonegraphy">
-  <title>Dulcieland – Branding</title>
+  <title>Dulcieland – Gallery</title>
   <link href="https://tranhpdung.github.io" rel='canonical'>
   <meta property="og:type" content="profile" />
   <meta property="og:title" content="Dulcie Tran" />
@@ -84,7 +84,7 @@
         <div class="small-12">
           <ul class="platform-menu vertical menu text-center" role="menu">
             <li role="menuitem" tabindex="0" class=""> <a href="/" tabindex="-1">Home</a> </li>
-            <li role="menuitem" tabindex="0" class=""> <a href="gallery.html" tabindex="-1">Gallery</a>
+            <li role="menuitem" tabindex="0" class=" active "> <a href="gallery.html" tabindex="-1">Gallery</a>
             </li>
             <li role="menuitem" tabindex="0" class=""> <a href="work.html" tabindex="-1">Work</a> </li>
             <li role="menuitem" tabindex="0" class=""> <a href="contact.html" tabindex="-1">Contact</a> </li>
@@ -118,7 +118,7 @@
         
               <ul class="platform-menu dropdown menu hide-for-small-only text-left float-right" role="menu" data-dropdown-menu>
                 <li role="menuitem" tabindex="0" class=""> <a href="/" tabindex="-1">Home</a> </li>
-                <li role="menuitem" tabindex="0" class=""> <a href="gallery.html" tabindex="-1">Gallery</a>
+                <li role="menuitem" tabindex="0" class=" active "> <a href="gallery.html" tabindex="-1">Gallery</a>
                 </li>
                 <li role="menuitem" tabindex="0" class="">
                   <a href="work.html" tabindex="-1">Work</a>
@@ -147,536 +147,620 @@
         
         </script>
         <main class="main" role="main">
-          <div id="branding" class="main-body">
+          <div id="gallery" class="main-body">
+            <style>
+              .gallery-content {
+                --color-bg: #e8e8e8;
+                --grid-item-bg: #f1f1f1;
+                min-height: 100vh;
+                color: #2a2e31;
+                background-color: #fff;
+                background-color: var(--color-bg);
+              }
             
+              /* Page Loader */
+              .js .loading::before {
+                content: '';
+                position: fixed;
+                z-index: 100000;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: var(--color-bg);
+              }
             
-            <div class="box">
-              <div class="wave -one"></div>
-              <div class="wave -two"></div>
-              <div class="wave -three"></div>
-              <h1 class="main-title">
-                Aurora
-              </h1>
-            </div>
+              .js .loading::after {
+                content: '';
+                position: fixed;
+                z-index: 100000;
+                top: 50%;
+                left: 50%;
+                width: 60px;
+                height: 60px;
+                margin: -30px 0 0 -30px;
+                pointer-events: none;
+                border-radius: 50%;
+                opacity: 0.4;
+                animation: loaderAnim 0.7s linear infinite alternate forwards;
+              }
             
-            <div class="grid-container">
-              <div class="document-container grid-x grid-margin-x">
-                <div class="small-12 cell">
-                  <h2 class="author is-hidden">Dulcie Tran H.P Dung</h2>
-                  <!-- Grid Example -->
+              @keyframes loaderAnim {
+                to {
+                  opacity: 1;
+                  transform: scale3d(0.5, 0.5, 1);
+                }
+              }
             
-                  <div class="grid-x grid-margin-x">
-                    <div class="large-12 cell">
-                      <section id="typography" data-magellan-target="typography" class="section">
-                        <h4 class="title-section separator-left">Typography</h4>
-                        <div class="grid-x grid-margin-x">
-                          <div class="medium-4 cell">
-                            <p class="typo-sample">Sans Serif</p>
-                            <p class="typo-alphabet">1234567890!@#$%^&amp;*()_+<br><strong class="text-uppercase">abcdefghijklmnopqrstuvwxyz</strong><br>abcdefghijklmnopqrstuvwxyz</p>
-                            <p class="text-normal">The quick brown fox jumps over the lazy dog.</p>
-                            <p class="text-bold">The quick brown fox jumps over the lazy dog.</p>
-                          </div>
-                          <div class="medium-5 cell typo-serif">
-                            <p class="typo-sample">Serif</p>
-                            <p class="typo-alphabet">1234567890!@#$%^&amp;*()_+<br><strong class="text-uppercase">abcdefghijklmnopqrstuvwxyz</strong><br>abcdefghijklmnopqrstuvwxyz</p>
-                            <p class="text-normal">The quick brown fox jumps over the lazy dog.</p>
-                            <p class="text-italic"><i>The quick brown fox jumps over the lazy dog.</i></p>
-                          </div>
+              .gallery-content {
+                position: relative;
+              }
             
+              .title__name,
+              .title__sub {
+                font-weight: normal;
+                margin: 0;
+                font-size: 1rem;
+              }
             
-                          <div class="medium-3 cell">
-                            <strong class="typo-sample hide-for-small-only">&nbsp;</strong>
-                            <p class="h1">Heading 1</p>
-                            <p class="h2">Heading 2</p>
-                            <p class="h3">Heading 3</p>
-                            <p class="h4">Heading 4</p>
-                            <p class="h5">Heading 5</p>
-                            <p class="h6">Heading 6</p>
-                          </div>
-                        </div>
+              .title__sub {
+                position: relative;
+                margin: 0;
+              }
             
-                      </section>
+              .grid-wrap {
+                position: relative;
+                max-width: 75rem;
+                margin: 0 auto;
+                padding: 6rem 1rem 0;
+              }
             
-                      <section id="colours" data-magellan-target="colours" class="section">
-                        <h4 class="title-section separator-left">Colours</h4>
-                        <div class="row medium-unstack">
-                          <div class="columns small-6 text-center margin-bottom-2">
-                            <div class="badge primary">#B5485F</div>
-                            <div class="badge-name">primary</div>
-                          </div>
-                          <div class="columns small-6 text-center margin-bottom-2">
-                            <div class="badge success">#42A270</div>
-                            <div class="badge-name">success</div>
-                          </div>
-                          <div class="columns small-6 text-center">
-                            <div class="badge alert">#FC6747</div>
-                            <div class="badge-name">alert</div>
-                          </div>
-                          <div class="columns small-6 text-center">
-                            <div class="badge warning">#E08541</div>
-                            <div class="badge-name">warning</div>
-                          </div>
+              .grid-wrap--hidden {
+                /*height: 0;
+                overflow: hidden;*/
+              }
             
-                        </div>
-                      </section>
-                      <section id="controls" data-magellan-target="controls" class="section">
-                        <h4 class="title-section separator-left">Controls</h4>
-                        <h5 class="hide-for-small-only">Large Buttons</h5>
-                        <div class="hide-for-small-only large button-group">
-                          <a href="#" class="large button">Primary Button</a>
-                          <a href="#" class="large success button">Success Button</a>
-                          <a href="#" class="large alert button">alert Button</a>
-                          <a href="#" class="large warning button">warning Button</a>
-                        </div>
-                        <div class="hide-for-small-only medium-6 large button-group">
-                          <a href="#" class="large hollow button">Primary Button</a>
-                          <a href="#" class="large success hollow button">Success Button</a>
-                          <a href="#" class="large alert hollow button">alert Button</a>
-                          <a href="#" class="large warning hollow button">warning Button</a>
-                        </div>
-                        <h5>Medium Buttons</h5>
-                        <div class="medium button-group">
-                          <a href="#" class="medium button">Primary Button</a><a href="#" class="medium success button">Success Button</a><a href="#" class="medium alert button">alert Button</a><a href="#" class="medium warning button">warning Button</a>
-                        </div>
-                        <div class="medium button-group">
-                          <a href="#" class="medium hollow button">Primary Button</a><a href="#" class="medium success hollow button">Success Button</a><a href="#" class="medium alert hollow button">alert Button</a><a href="#" class="medium warning hollow button">warning Button</a>
-                        </div>
-                        <h5>Small Buttons</h5>
-                        <div class="small button-group">
-                          <a href="#" class="small button">Primary Button</a><a href="#" class="small success button">Success Button</a><a href="#" class="small alert button">alert Button</a><a href="#" class="small warning button">warning Button</a>
-                        </div>
-                        <div class="small button-group">
-                          <a href="#" class="small hollow button">Primary Button</a><a href="#" class="small success hollow button">Success Button</a><a href="#" class="small alert hollow button">alert Button</a><a href="#" class="small warning hollow button">warning Button</a>
-                        </div>
-                        <h5>Group Buttons</h5>
-                        <div class="grid-x button-groups">
-                          <div class="hide-for-small-only cell small-12  medium-12 large-6">
-                            <div class="large button-group">
-                              <a class="button">Large</a>
-                              <a class="button">Button</a>
-                              <a class="button">Group</a>
-                            </div>
-                          </div>
-                          <div class="hide-for-small-only cell small-12  medium-12 large-6">
-                            <div class="large button-group">
-                              <a class="secondary button">Large</a>
-                              <a class="secondary button">Button</a>
-                              <a class="secondary button">Group</a>
-                            </div>
-                          </div>
-                          <div class="hide-for-small-only cell small-12  medium-12 large-6">
-                            <div class="medium button-group">
-                              <a class="button">Medium</a>
-                              <a class="button">Button</a>
-                              <a class="button">Group</a>
-                            </div>
-                          </div>
-                          <div class="cell small-12  medium-12 large-6">
-                            <div class="medium button-group">
-                              <a class="secondary button">Medium</a>
-                              <a class="secondary button">Button</a>
-                              <a class="secondary button">Group</a>
-                            </div>
-                          </div>
-                          <div class="cell small-12  medium-12 large-6">
-                            <div class="small button-group">
-                              <a class="button">Small</a>
-                              <a class="button">Button</a>
-                              <a class="button">Group</a>
-                            </div>
-                          </div>
-                          <div class="cell small-12  medium-12 large-6">
-                            <div class="small button-group">
-                              <a class="secondary button">Small</a>
-                              <a class="secondary button">Button</a>
-                              <a class="secondary button">Group</a>
-                            </div>
-                          </div>
-                        </div>
-                        <h5>Split Buttons</h5>
-                        <div class="grid-x button-groups">
-                          <div class="hide-for-small-only cell small-12  medium-12 large-6">
-                            <div class="large button-group">
-                              <a class="button">Large Primary Action</a>
-                              <a class="dropdown button arrow-only">
-                                <span class="show-for-sr">Show menu</span>
-                              </a>
-                            </div>
-                          </div>
-                          <div class="hide-for-small-only cell small-12  medium-12 large-6">
-                            <div class="large button-group">
-                              <a class="secondary button">Large Secondary Action</a>
-                              <a class="dropdown secondary button arrow-only">
-                                <span class="show-for-sr">Show menu</span>
-                              </a>
-                            </div>
-                          </div>
-                          <div class="hide-for-small-only cell small-12  medium-12 large-6">
-                            <div class="large button-group">
-                              <a class="hollow button">Large Primary Action</a>
-                              <a class="dropdown button arrow-only">
-                                <span class="show-for-sr">Show menu</span>
-                              </a>
-                            </div>
-                          </div>
-                          <div class="hide-for-small-only cell small-12  medium-12 large-6">
-                            <div class="large button-group">
-                              <a class="hollow secondary button">Large Secondary Action</a>
-                              <a class="dropdown secondary button arrow-only">
-                                <span class="show-for-sr">Show menu</span>
-                              </a>
-                            </div>
-                          </div>
-                          <div class="cell small-12  medium-12 large-6">
-                            <div class="medium button-group">
-                              <a class="button">Medium Primary Action</a>
-                              <a class="dropdown button arrow-only">
-                                <span class="show-for-sr">Show menu</span>
-                              </a>
-                            </div>
-                          </div>
-                          <div class="cell small-12  medium-12 large-6">
-                            <div class="medium button-group">
-                              <a class="secondary button">Medium Secondary Action</a>
-                              <a class="dropdown secondary button arrow-only">
-                                <span class="show-for-sr">Show menu</span>
-                              </a>
-                            </div>
-                          </div>
-                          <div class="cell small-12  medium-12 large-6">
-                            <div class="medium button-group">
-                              <a class="hollow button">Medium Primary Action</a>
-                              <a class="dropdown button arrow-only">
-                                <span class="show-for-sr">Show menu</span>
-                              </a>
-                            </div>
-                          </div>
-                          <div class="cell small-12  medium-12 large-6">
-                            <div class="medium button-group">
-                              <a class="hollow secondary button">Medium Secondary Action</a>
-                              <a class="dropdown secondary button arrow-only">
-                                <span class="show-for-sr">Show menu</span>
-                              </a>
-                            </div>
-                          </div>
-                          <div class="cell small-12  medium-12 large-6">
-                            <div class="small button-group">
-                              <a class="button">Small Primary Action</a>
-                              <a class="dropdown button arrow-only">
-                                <span class="show-for-sr">Show menu</span>
-                              </a>
-                            </div>
-                          </div>
-                          <div class="cell small-12  medium-12 large-6">
-                            <div class="small button-group">
-                              <a class="secondary button">Small Secondary Action</a>
-                              <a class="dropdown secondary button arrow-only">
-                                <span class="show-for-sr">Show menu</span>
-                              </a>
-                            </div>
-                          </div>
+              .grid {
+                margin: 0 auto;
+                position: relative;
+                display: none;
+              }
             
-                          <div class="cell small-12  medium-12 large-6">
-                            <div class="small button-group">
-                              <a class="hollow button">Small Primary Action</a>
-                              <a class="dropdown button arrow-only">
-                                <span class="show-for-sr">Show menu</span>
-                              </a>
-                            </div>
-                          </div>
-                          <div class="cell small-12  medium-12 large-6">
-                            <div class="small button-group">
-                              <a class="hollow secondary button">Small Secondary Action</a>
-                              <a class="dropdown secondary button arrow-only">
-                                <span class="show-for-sr">Show menu</span>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
+              .js .grid {
+                display: block;
+              }
             
-                      <section id="form-samples" data-magellan-target="form-samples" class="secondary">
-                        <h4 class="title-section separator-left">Form </h4>
-                        <div class="grid-x grid-margin-x">
-                          <div class="small-12 medium-4 large-4 callout cell">
-                            <h5>Sign in</h5>
-                            <form class="show-password">
-                              <label for="username1" class="show-for-sr">Username</label>
-                              <input type="text" value="" placeholder="Username" id="username1">
-                              <div class="password-wrapper">
-                                <label for="password1" class="show-for-sr">Password</label>
-                                <input type="password" value="" placeholder="Password" id="password1" class="password">
-                                <button class="unmask" type="button" title="Mask/Unmask password to check content"><svg class="feather">
-                                    <use xlink:href="#eye" /> </svg></button>
-                              </div>
-                              <div class="grid-x grid-margin-x">
-                                <div class="small-8 cell"><label>Remember me?</label></div>
-                                <div class="small-4 cell">
-                                  <div class="switch float-right">
-                                    <input class="switch-input" id="yes-no" type="checkbox" checked name="exampleSwitch">
+              .grid__item {
+                width: 260px;
+                position: relative;
+                padding: 1.8rem;
+                margin-bottom: 4rem;
+              }
             
-                                    <label class="switch-paddle" for="yes-no">
-                                      <span class="show-for-sr">Remember me</span>
-                                      <span class="switch-active" aria-hidden="true">Yes</span>
-                                      <span class="switch-inactive" aria-hidden="true">No</span>
-                                    </label>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="expanded button-group">
-                                <a href="#" class="large button">Sign in</a>
-                                <a href="#" class="large hollow button">Sign up</a>
-                              </div>
-                            </form>
-                          </div>
-                          <div class="small-12 medium-4 large-4 callout cell">
-                            <h5>Sign up</h5>
-                            <form class="show-password">
-                              <label for="username2" class="show-for-sr">Username <abbr title="(required)">*</abbr></label>
-                              <input type="text" value="" placeholder="Username" id="username2">
-                              <div class="password-wrapper">
-                                <label for="password2" class="show-for-sr">Password<abbr title="(required)">*</abbr></label>
-                                <input type="password" value="" placeholder="Password" id="password2" class="password">
-                                <button class="unmask" type="button" title="Mask/Unmask password to check content"><svg class="feather">
-                                    <use xlink:href="#eye" /> </svg></button>
-                              </div>
-                              <label for="birthday" class="show-for-sr">Birthday</label>
-                              <input type="text" value="" placeholder="Birthday" id="birthday">
+              .grid__item-wrap {
+                position: relative;
+              }
             
-                              <div class="expanded button-group">
-                                <a href="#" class="large button">Sign up</a>
-                              </div>
-                            </form>
-                          </div>
-                          <div class="small-12 medium-4 large-4 callout cell">
-                            <h5>Forget password</h5>
-                            <form class="show-password">
-                              <label for="email" class="show-for-sr">Email</label>
-                              <input type="email" value="" placeholder="Email" id="email">
-                              <div class="expanded button-group">
-                                <a href="#" class="large button">Send Email</a>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                      </section>
-                      <section id="icons" data-magellan-target="icons" class="section">
-                        <h4 class="title-section separator-left">Icons</h4>
-                        <div class="row small-up-2 medium-up-2 large-up-4">
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#award" /></svg><span class="name-icon">award</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#check-circle" /></svg><span class="name-icon">check-circle</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#check-square" /></svg><span class="name-icon">check-square</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#check" /></svg><span class="name-icon">check</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#download-cloud" /></svg><span class="name-icon">download-cloud</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#download" /></svg><span class="name-icon">download</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#upload-cloud" /></svg><span class="name-icon">upload-cloud</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#upload" /></svg><span class="name-icon">upload</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#copy" /></svg><span class="name-icon">copy</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#eye" /></svg><span class="name-icon">eye</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#eye-off" /></svg><span class="name-icon">eye-off</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#bluetooth" /></svg><span class="name-icon">bluetooth</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#external-link" /></svg><span class="name-icon">external-link</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#film" /></svg><span class="name-icon">film</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#video" /></svg><span class="name-icon">video</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#image" /></svg><span class="name-icon">image</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#grid" /></svg><span class="name-icon">grid</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#list" /></svg><span class="name-icon">list</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#heart" /></svg><span class="name-icon">heart</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#link" /></svg><span class="name-icon">link</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#map-pin" /></svg><span class="name-icon">map-pin</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#mail" /></svg><span class="name-icon">mail</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#maximize" /></svg><span class="name-icon">maximize</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#minimize" /></svg><span class="name-icon">minimize</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#more-horizontal" /></svg><span class="name-icon">more-horizontal</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#more-vertical" /></svg><span class="name-icon">more-vertical</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#play" /></svg><span class="name-icon">play</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#pause" /></svg><span class="name-icon">pause</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#music" /></svg><span class="name-icon">music</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#shuffle" /></svg><span class="name-icon">shuffle</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#repeat" /></svg><span class="name-icon">repeat</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#share" /></svg><span class="name-icon">share</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#settings" /></svg><span class="name-icon">settings</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#sliders" /></svg><span class="name-icon">sliders</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#thumbs-down" /></svg><span class="name-icon">thumbs-down</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#thumbs-up" /></svg><span class="name-icon">thumbs-up</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#user" /></svg><span class="name-icon">user</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#users" /></svg><span class="name-icon">users</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#volume" /></svg><span class="name-icon">volume</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#volume-x" /></svg><span class="name-icon">volume-x</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#volume-1" /></svg><span class="name-icon">volume-1</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#volume-2" /></svg><span class="name-icon">volume-2</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#trending-down" /></svg><span class="name-icon">trending-down</span>
-                          </div>
-                          <div class="column callout align-middle grid-x grid-margin-x">
-                            <svg class="small-4 cell feather">
-                              <use xlink:href="#trending-up" /></svg><span class="name-icon">trending-up</span>
-                          </div>
+              .grid__item-bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: var(--grid-item-bg);
+              }
             
-                        </div>
-                      </section>
+              .grid__item-img {
+                filter: grayscale(1);
+                transition: filter 0.3s;
+                pointer-events: none;
+                position: relative;
+                max-width: 100%;
+                margin: 0 auto;
+                display: block;
+                outline: 1px solid transparent;
+              }
+              .grid__item:hover .grid__item-img{
+                filter: grayscale(0);
+              }
+              .grid__item:nth-child(even) .grid__item-img {
+                transform: rotate3d(0, 0, 1, 4deg);
+              }
+            
+              .grid__item:nth-child(odd) .grid__item-img {
+                transform: rotate3d(0, 0, 1, -4deg);
+              }
+            
+              .grid__item-title {
+                font-weight: normal;
+                position: absolute;
+                left: 0;
+                top: 0;
+                margin: 0 0 0 1rem;
+                -webkit-writing-mode: vertical-rl;
+                writing-mode: vertical-rl;
+                transform: rotate(180deg);
+                transform-origin: 0 50%;
+              }
+            
+              .grid__item-number {
+                font-weight: bold;
+                font-family: Avenir, sans-serif;
+                font-style: normal;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                font-size: 1.6rem;
+                margin: 0 0 0.15rem;
+              }
+            
+              .grid__item-number>span {
+                display: inline-block;
+              }
+            
+              .content {
+                margin: 0 auto;
+                grid-template-columns: 100%;
+                grid-template-rows: 100%;
+                align-items: center;
+                pointer-events: none;
+                font-family: Baskerville, serif;
+              }
+            
+              .js .content {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 1000;
+              }
+            
+              .content__item {
+                padding: 10rem 5vw 10rem;
+                grid-area: 1 / 1 / 1 / 1;
+              }
+            
+              .js .content__item {
+                height: 0;
+                opacity: 0;
+                overflow: hidden;
+                padding: 0;
+                pointer-events: none;
+              }
+            
+              .js .content__item--current {
+                height: auto;
+                opacity: 1;
+                padding: 3rem 5vw 10rem;
+                pointer-events: auto;
+              }
+            
+              .content__item-intro {
+                position: relative;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 100%;
+                align-items: center;
+              }
+            
+              .content__item-img {
+                position: relative;
+                height: auto;
+                max-width: 100%;
+                display: block;
+                margin: 0 auto;
+                grid-area: 1 / 1 / 1 / 1;
+              }
+            
+              .js .content__item-img {
+                visibility: hidden;
+              }
+            
+              .content__item-title {
+                color: #B5485F;
+                position: relative;
+                font-size: 7vw;
+                font-weight: normal;
+                line-height: 1;
+                text-align: center;
+                margin: 0;
+                padding: 0 5vw;
+                white-space: nowrap;
+                grid-area: 1 / 1 / 1 / 1;
+                text-shadow: 0 2px 0 rgba(255, 255, 255, .6), 0 4px 10px rgba(0, 0, 0, .8);
+              }
+            
+              .content__item-title>span {
+                white-space: pre;
+                display: inline-block;
+              }
+            
+              .content__item-subtitle {
+                text-align: center;
+                font-size: 1.25rem;
+                font-weight: normal;
+                margin: 3rem auto;
+              }
+            
+              .content__item-text {
+                text-align: justify;
+                max-width: 800px;
+                margin: 0 auto;
+                font-style: italic;
+              }
+            
+              .content__item-text p {
+                margin: 0;
+              }
+            
+              .content__close {
+                font-family: Avenir;
+                position: absolute;
+                top: 0.75rem;
+                left: 50%;
+                z-index: 10000;
+                transform: translateX(-50%);
+                background: none;
+                border: 0;
+                margin: 0;
+                padding: 0;
+                cursor: pointer;
+            
+              }
+            
+              .content__close:focus {
+                outline: none;
+              }
+            
+              .content__item--current~.content__close {
+                pointer-events: auto;
+              }
+            
+              .content__indicator {
+                position: absolute;
+                top: calc(100vh - 6rem);
+                left: calc(50% - 0.75rem);
+                display: none;
+              }
+            
+              .js .content__item-title>span,
+              .js .content__item-subtitle,
+              .js .content__item-text,
+              .content__close,
+              .content__indicator {
+                opacity: 0;
+              }
+            
+              @media screen and (min-width: 55em) {
+            
+                .title {
+                  grid-area: title;
+                  display: flex;
+                  text-align: left;
+                }
+            
+                .title__sub {
+                  position: relative;
+                  padding: 0 0 0 5rem;
+                  margin: 0 0 0 1rem;
+                }
+            
+                .title__sub::before {
+                  content: '';
+                  height: 1px;
+                  width: 4rem;
+                  background: currentColor;
+                  position: absolute;
+                  top: 0.65rem;
+                  left: 0;
+                }
+            
+                .title__sub-works {
+                  display: block;
+                }
+            
+                .grid__item-number {
+                  right: -2.45rem;
+                }
+            
+                .grid__item-title {
+                  margin-left: -0.25rem;
+                }
+            
+                .content__item-subtitle {
+                  font-size: 3vw;
+                }
+            
+                .content__item-text {
+                  column-count: 2;
+                  column-gap: 30px;
+                }
+            
+                .content__item-img {
+                  max-width: none;
+                  height: calc(100vh - 6rem);
+                }
+            
+                .content__item-subtitle {
+                  max-width: 50%;
+                }
+            
+                .content__indicator {
+                  display: block;
+                }
+              }
+            
+            </style>
+            <script>
+              document.documentElement.className = "js";
+              var supportsCssVars = function() {
+                var e, t = document.createElement("style");
+                return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+              };
+              supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+            
+            </script>
+            
+            <section id="gallery-content" class="gallery-content">
+            
+              <div class="grid-wrap">
+                <div class="grid lazyload">
+                  <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                      <img class="grid__item-img lazyload" src="https://drscdn.500px.org/photo/255922979/q%3D80_m%3D2000/v2?user_id=26368717&webp=true&sig=05ebd798e7c47acdfe3da26d100c1001896c56103078370b518cbf30dfebdd56" alt="Singapura – smart nation" />
             
                     </div>
-                  </div>
+                    <h3 class="grid__item-title">Smart nation</h3>
+                    <h4 class="grid__item-number">2018</h4>
+                  </a>
+                  <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                      <img class="grid__item-img lazyload" src="https://drscdn.500px.org/photo/269074517/q%3D80_m%3D1500/v2?user_id=26368717&webp=true&sig=176f8f0dbc8a90182e91f6a279b7f83e4c6be0657c396c36dad3049ba6767f03" alt="One week in Kon Tum" />
+                    </div>
+                    <h3 class="grid__item-title">One week in Kon Tum</h3>
+                    <h4 class="grid__item-number">2015</h4>
+                  </a>
+                  <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                      <img class="grid__item-img lazyload" src="https://drscdn.500px.org/photo/266562275/q%3D80_m%3D2000/v2?user_id=26368717&webp=true&sig=d9dee544fecfb4f4d53f65ff71dea110bccf115dbb72744be4d55f1015f3e2d2" alt="My bucket list" />
+                    </div>
+                    <h3 class="grid__item-title">My bucket list</h3>
+                    <h4 class="grid__item-number">2017</h4>
+                  </a>
+                  <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                      <img class="grid__item-img lazyload" src="https://drscdn.500px.org/photo/266261223/q%3D80_m%3D2000_k%3D1/v2?user_id=26368717&webp=true&sig=1529ef1727ce254291817bda170882393a001bbd7f71816c85605f3b9bceec3c" alt="A hidden gem in SaiGon" />
+                    </div>
+                    <h3 class="grid__item-title">A hidden gem</h3>
+                    <h4 class="grid__item-number">2014</h4>
+                  </a>
+                  <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                      <img class="grid__item-img lazyload" src="https://drscdn.500px.org/photo/255984123/q%3D80_m%3D1500/v2?user_id=26368717&webp=true&sig=0398f95b344e1559c841e7d78537c720495953dea52188dee87f43a6fa824197" alt="Lost in Trang An" />
+                    </div>
+                    <h3 class="grid__item-title">Lost in Trang An</h3>
+                    <h4 class="grid__item-number">2012</h4>
+                  </a>
+                  <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                      <img class="grid__item-img lazyload" src="https://drscdn.500px.org/photo/263671013/q%3D80_m%3D2000_k%3D1/v2?user_id=26368717&webp=true&sig=b9a81c254cfa6384a5820ce747fd723327f667561ba951b22ba3548c5784f847" alt="Paradise cave" />
+                    </div>
+                    <h3 class="grid__item-title">Paradise cave</h3>
+                    <h4 class="grid__item-number">2016</h4>
+                  </a>
+                  <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                      <img class="grid__item-img lazyload" src="https://drscdn.500px.org/photo/271206537/q%3D80_m%3D2000/v2?user_id=26368717&webp=true&sig=da6b00b590ba2ac981c941dbff8218d87c7c92b91e7967d00d069fda834df6b3" alt="Ho Quoc Pagoda" />
+                    </div>
+                    <h3 class="grid__item-title">Ho Quoc Pagoda</h3>
+                    <h4 class="grid__item-number">2018</h4>
+                  </a>
+                  <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                      <img class="grid__item-img lazyload" src="https://drscdn.500px.org/photo/255909745/q%3D80_m%3D2000_k%3D1/v2?user_id=26368717&webp=true&sig=8f5c30d7b36e551b1f04c08175be5109e37a1aeb60d1ef1921de3807d4c981d5" alt="Marina Bay" />
+                    </div>
+                    <h3 class="grid__item-title">Marina Bay</h3>
+                    <h4 class="grid__item-number">2018</h4>
+                  </a>
+                  <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                      <img class="grid__item-img lazyload" src="assets/img/42395776_10214739794303327_9156442414724939776_n.jpg" alt="Above the cloud" />
+                    </div>
+                    <h3 class="grid__item-title">Above the cloud</h3>
+                    <h4 class="grid__item-number">2017</h4>
+                  </a>
+                  <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                      <img class="grid__item-img lazyload" src="assets/img/Y5VJEbsaS9WpjiiCgJKmpg_thumb_2e5.jpg" alt="Where a dream came true" />
+                    </div>
+                    <h3 class="grid__item-title">Where a dream came true</h3>
+                    <h4 class="grid__item-number">2018</h4>
+                  </a>
+                  <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                      <img class="grid__item-img lazyload" src="assets/img/20170910103901.jpg" alt="Old King cave" />
+                    </div>
+                    <h3 class="grid__item-title">Sung Sot caves</h3>
+                    <h4 class="grid__item-number">2017</h4>
+                  </a>
+                  <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                      <img class="grid__item-img lazyload" src="assets/img/iC64XeAFRRiERs.jpg" alt="A tour with fam" />
+                    </div>
+                    <h3 class="grid__item-title">A tour with fam</h3>
+                    <h4 class="grid__item-number">2012</h4>
+                  </a>
                 </div>
-                <div class="small-12 cell branding-menu-container hide-for-small-only"  data-closable>
-            
-            
-                  <div id="branding-menu" data-sticky data-stick-to="top" data-margin-top="4.25" data-container-class="document-container" class="branding-menu sticky-menu">
-            
-                    <ul class="horizontal menu platform-menu row" data-magellan data-offset="120">
-                      <li class="column"><a href="#typography">Typography</a></li>
-                      <li class="column"><a href="#colours">Colours</a></li>
-                      <li class="column"><a href="#controls">Controls</a></li>
-                      <li class="column"><a href="#form-samples">Form</a></li>
-                      <li class="column"><a href="#icons">Icons</a></li>
-                    </ul>
-                    <button class="rounded close-button" aria-label="Close Menu" type="button" data-close>
-                      <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-menu"><use xlink:href="#x" /></svg></span>
-                    </button>
+              </div><!-- /grid-wrap -->
+              <div class="content">
+                <div class="content__item">
+                  <div class="content__item-intro">
+                    <img class="content__item-img" src="https://drscdn.500px.org/photo/255922979/q%3D80_m%3D2000/v2?user_id=26368717&webp=true&sig=05ebd798e7c47acdfe3da26d100c1001896c56103078370b518cbf30dfebdd56" alt="Singapura – smart nation" />
+                    <h2 class="content__item-title">Singapura – smart nation</h2>
                   </div>
-                </div>
+                  <h3 class="content__item-subtitle">"How I learned to cherish life after a trip to hell"</h3>
+                  <div class="content__item-text">
+                    <p>When I was in the islands nearly a generation ago, I was acquainted with a young American couple who had among their belongings an attractive little son of the age of seven—attractive but not practicably companionable with me, because he knew no English. He had played from his birth with the little Kanakas on his father’s plantation, and had preferred their language and would learn no other. The family removed to America a month after I arrived in the islands, and straightway the boy began to lose his Kanaka and pick up English. By the time he was twelve he hadn’t a word of Kanaka left; the language had wholly departed from his tongue and from his comprehension. Nine years later, when he was twenty-one, I came upon the family in one of the lake towns of New York, and the mother told me about an adventure which her son had been having. By trade he was now a professional diver. A passenger boat had been caught in a storm on the lake, and had gone down, carrying her people with her. A few days later the young diver descended, with his armor on, and entered the berth-saloon of the boat, and stood at the foot of the companionway, with his hand on the rail, peering through the dim water. Presently something touched him on the shoulder, and he turned and found a dead man swaying and bobbing about him and seemingly inspecting him inquiringly. He was paralyzed with fright.</p>
+                    <p>His entry had disturbed the water, and now he discerned a number of dim corpses making for him and wagging their heads and swaying their bodies like sleepy people trying to dance. His senses forsook him, and in that condition he was drawn to the surface. He was put to bed at home, and was soon very ill. During some days he had seasons of delirium which lasted several hours at a time; and while they lasted he talked Kanaka incessantly and glibly; and Kanaka only. He was still very ill, and he talked to me in that tongue; but I did not understand it, of course. The doctor-books tell us that cases like this are not uncommon. Then the doctors ought to study the cases and find out how to multiply them. Many languages and things get mislaid in a person’s head, and stay mislaid for lack of this remedy.</p>
+                    <p>Several of our passengers belonged in Honolulu, and these were sent ashore; but nobody could go ashore and return. There were people on shore who were booked to go with us to Australia, but we could not receive them; to do it would cost us a quarantine-term in Sydney. They could have escaped the day before, by ship to San Francisco; but the bars had been put up, now, and they might have to wait weeks before any ship could venture to give them a passage any whither. And there were hardships for others. An elderly lady and her son, recreation-seekers from Massachusetts, had wandered westward, further and further from home, always intending to take the return track, but always concluding to go still a little further; and now here they were at anchor before Honolulu positively their last westward-bound indulgence—they had made up their minds to that—but where is the use in making up your mind in this world? It is usually a waste of time to do it. These two would have to stay with us as far as Australia. Then they could go on around the world, or go back the way they had come; the distance and the accommodations and outlay of time would be just the same, whichever of the two routes they might elect to take. Think of it: a projected excursion of five hundred miles gradually enlarged, without any elaborate degree of intention, to a possible twenty-four thousand. However, they were used to extensions by this time, and did not mind this new one much.</p>
+                  </div>
+                </div><!-- /content__item -->
+                <div class="content__item">
+                  <div class="content__item-intro">
+                    <img class="content__item-img" src="https://drscdn.500px.org/photo/269074517/q%3D80_m%3D1500/v2?user_id=26368717&webp=true&sig=176f8f0dbc8a90182e91f6a279b7f83e4c6be0657c396c36dad3049ba6767f03" alt="One week in Kon Tum" />
+                    <h2 class="content__item-title">One week in Kon Tum</h2>
+                  </div>
+                  <h3 class="content__item-subtitle">"How I learned to cherish life after a trip to hell"</h3>
+                  <div class="content__item-text">
+                    <p>When I was in the islands nearly a generation ago, I was acquainted with a young American couple who had among their belongings an attractive little son of the age of seven—attractive but not practicably companionable with me, because he knew no English. He had played from his birth with the little Kanakas on his father’s plantation, and had preferred their language and would learn no other. The family removed to America a month after I arrived in the islands, and straightway the boy began to lose his Kanaka and pick up English. By the time he was twelve he hadn’t a word of Kanaka left; the language had wholly departed from his tongue and from his comprehension. Nine years later, when he was twenty-one, I came upon the family in one of the lake towns of New York, and the mother told me about an adventure which her son had been having. By trade he was now a professional diver. A passenger boat had been caught in a storm on the lake, and had gone down, carrying her people with her. A few days later the young diver descended, with his armor on, and entered the berth-saloon of the boat, and stood at the foot of the companionway, with his hand on the rail, peering through the dim water. Presently something touched him on the shoulder, and he turned and found a dead man swaying and bobbing about him and seemingly inspecting him inquiringly. He was paralyzed with fright.</p>
+                    <p>His entry had disturbed the water, and now he discerned a number of dim corpses making for him and wagging their heads and swaying their bodies like sleepy people trying to dance. His senses forsook him, and in that condition he was drawn to the surface. He was put to bed at home, and was soon very ill. During some days he had seasons of delirium which lasted several hours at a time; and while they lasted he talked Kanaka incessantly and glibly; and Kanaka only. He was still very ill, and he talked to me in that tongue; but I did not understand it, of course. The doctor-books tell us that cases like this are not uncommon. Then the doctors ought to study the cases and find out how to multiply them. Many languages and things get mislaid in a person’s head, and stay mislaid for lack of this remedy.</p>
+                    <p>Several of our passengers belonged in Honolulu, and these were sent ashore; but nobody could go ashore and return. There were people on shore who were booked to go with us to Australia, but we could not receive them; to do it would cost us a quarantine-term in Sydney. They could have escaped the day before, by ship to San Francisco; but the bars had been put up, now, and they might have to wait weeks before any ship could venture to give them a passage any whither. And there were hardships for others. An elderly lady and her son, recreation-seekers from Massachusetts, had wandered westward, further and further from home, always intending to take the return track, but always concluding to go still a little further; and now here they were at anchor before Honolulu positively their last westward-bound indulgence—they had made up their minds to that—but where is the use in making up your mind in this world? It is usually a waste of time to do it. These two would have to stay with us as far as Australia. Then they could go on around the world, or go back the way they had come; the distance and the accommodations and outlay of time would be just the same, whichever of the two routes they might elect to take. Think of it: a projected excursion of five hundred miles gradually enlarged, without any elaborate degree of intention, to a possible twenty-four thousand. However, they were used to extensions by this time, and did not mind this new one much.</p>
+                  </div>
+                </div><!-- /content__item -->
+                <div class="content__item">
+                  <div class="content__item-intro">
+                    <img class="content__item-img" src="https://drscdn.500px.org/photo/266562275/q%3D80_m%3D2000/v2?user_id=26368717&webp=true&sig=d9dee544fecfb4f4d53f65ff71dea110bccf115dbb72744be4d55f1015f3e2d2" alt="My bucket list" />
+                    <h2 class="content__item-title">My bucket list</h2>
+                  </div>
+                  <h3 class="content__item-subtitle">"How I learned to cherish life after a trip to hell"</h3>
+                  <div class="content__item-text">
+                    <p>When I was in the islands nearly a generation ago, I was acquainted with a young American couple who had among their belongings an attractive little son of the age of seven—attractive but not practicably companionable with me, because he knew no English. He had played from his birth with the little Kanakas on his father’s plantation, and had preferred their language and would learn no other. The family removed to America a month after I arrived in the islands, and straightway the boy began to lose his Kanaka and pick up English. By the time he was twelve he hadn’t a word of Kanaka left; the language had wholly departed from his tongue and from his comprehension. Nine years later, when he was twenty-one, I came upon the family in one of the lake towns of New York, and the mother told me about an adventure which her son had been having. By trade he was now a professional diver. A passenger boat had been caught in a storm on the lake, and had gone down, carrying her people with her. A few days later the young diver descended, with his armor on, and entered the berth-saloon of the boat, and stood at the foot of the companionway, with his hand on the rail, peering through the dim water. Presently something touched him on the shoulder, and he turned and found a dead man swaying and bobbing about him and seemingly inspecting him inquiringly. He was paralyzed with fright.</p>
+                    <p>His entry had disturbed the water, and now he discerned a number of dim corpses making for him and wagging their heads and swaying their bodies like sleepy people trying to dance. His senses forsook him, and in that condition he was drawn to the surface. He was put to bed at home, and was soon very ill. During some days he had seasons of delirium which lasted several hours at a time; and while they lasted he talked Kanaka incessantly and glibly; and Kanaka only. He was still very ill, and he talked to me in that tongue; but I did not understand it, of course. The doctor-books tell us that cases like this are not uncommon. Then the doctors ought to study the cases and find out how to multiply them. Many languages and things get mislaid in a person’s head, and stay mislaid for lack of this remedy.</p>
+                    <p>Several of our passengers belonged in Honolulu, and these were sent ashore; but nobody could go ashore and return. There were people on shore who were booked to go with us to Australia, but we could not receive them; to do it would cost us a quarantine-term in Sydney. They could have escaped the day before, by ship to San Francisco; but the bars had been put up, now, and they might have to wait weeks before any ship could venture to give them a passage any whither. And there were hardships for others. An elderly lady and her son, recreation-seekers from Massachusetts, had wandered westward, further and further from home, always intending to take the return track, but always concluding to go still a little further; and now here they were at anchor before Honolulu positively their last westward-bound indulgence—they had made up their minds to that—but where is the use in making up your mind in this world? It is usually a waste of time to do it. These two would have to stay with us as far as Australia. Then they could go on around the world, or go back the way they had come; the distance and the accommodations and outlay of time would be just the same, whichever of the two routes they might elect to take. Think of it: a projected excursion of five hundred miles gradually enlarged, without any elaborate degree of intention, to a possible twenty-four thousand. However, they were used to extensions by this time, and did not mind this new one much.</p>
+                  </div>
+                </div><!-- /content__item -->
+                <div class="content__item">
+                  <div class="content__item-intro">
+                    <img class="content__item-img" src="https://drscdn.500px.org/photo/266261223/q%3D80_m%3D2000_k%3D1/v2?user_id=26368717&webp=true&sig=1529ef1727ce254291817bda170882393a001bbd7f71816c85605f3b9bceec3c" alt="A hidden gem" />
+                    <h2 class="content__item-title">A hidden gem</h2>
+                  </div>
+                  <h3 class="content__item-subtitle">"How I learned to cherish life after a trip to hell"</h3>
+                  <div class="content__item-text">
+                    <p>When I was in the islands nearly a generation ago, I was acquainted with a young American couple who had among their belongings an attractive little son of the age of seven—attractive but not practicably companionable with me, because he knew no English. He had played from his birth with the little Kanakas on his father’s plantation, and had preferred their language and would learn no other. The family removed to America a month after I arrived in the islands, and straightway the boy began to lose his Kanaka and pick up English. By the time he was twelve he hadn’t a word of Kanaka left; the language had wholly departed from his tongue and from his comprehension. Nine years later, when he was twenty-one, I came upon the family in one of the lake towns of New York, and the mother told me about an adventure which her son had been having. By trade he was now a professional diver. A passenger boat had been caught in a storm on the lake, and had gone down, carrying her people with her. A few days later the young diver descended, with his armor on, and entered the berth-saloon of the boat, and stood at the foot of the companionway, with his hand on the rail, peering through the dim water. Presently something touched him on the shoulder, and he turned and found a dead man swaying and bobbing about him and seemingly inspecting him inquiringly. He was paralyzed with fright.</p>
+                    <p>His entry had disturbed the water, and now he discerned a number of dim corpses making for him and wagging their heads and swaying their bodies like sleepy people trying to dance. His senses forsook him, and in that condition he was drawn to the surface. He was put to bed at home, and was soon very ill. During some days he had seasons of delirium which lasted several hours at a time; and while they lasted he talked Kanaka incessantly and glibly; and Kanaka only. He was still very ill, and he talked to me in that tongue; but I did not understand it, of course. The doctor-books tell us that cases like this are not uncommon. Then the doctors ought to study the cases and find out how to multiply them. Many languages and things get mislaid in a person’s head, and stay mislaid for lack of this remedy.</p>
+                    <p>Several of our passengers belonged in Honolulu, and these were sent ashore; but nobody could go ashore and return. There were people on shore who were booked to go with us to Australia, but we could not receive them; to do it would cost us a quarantine-term in Sydney. They could have escaped the day before, by ship to San Francisco; but the bars had been put up, now, and they might have to wait weeks before any ship could venture to give them a passage any whither. And there were hardships for others. An elderly lady and her son, recreation-seekers from Massachusetts, had wandered westward, further and further from home, always intending to take the return track, but always concluding to go still a little further; and now here they were at anchor before Honolulu positively their last westward-bound indulgence—they had made up their minds to that—but where is the use in making up your mind in this world? It is usually a waste of time to do it. These two would have to stay with us as far as Australia. Then they could go on around the world, or go back the way they had come; the distance and the accommodations and outlay of time would be just the same, whichever of the two routes they might elect to take. Think of it: a projected excursion of five hundred miles gradually enlarged, without any elaborate degree of intention, to a possible twenty-four thousand. However, they were used to extensions by this time, and did not mind this new one much.</p>
+                  </div>
+                </div><!-- /content__item -->
+                <div class="content__item">
+                  <div class="content__item-intro">
+                    <img class="content__item-img" src="https://drscdn.500px.org/photo/255984123/q%3D80_m%3D1500/v2?user_id=26368717&webp=true&sig=0398f95b344e1559c841e7d78537c720495953dea52188dee87f43a6fa824197" alt="Lost in Trang An" />
+                    <h2 class="content__item-title">Lost in Trang An</h2>
+                  </div>
+                  <h3 class="content__item-subtitle">"How I learned to cherish life after a trip to hell"</h3>
+                  <div class="content__item-text">
+                    <p>When I was in the islands nearly a generation ago, I was acquainted with a young American couple who had among their belongings an attractive little son of the age of seven—attractive but not practicably companionable with me, because he knew no English. He had played from his birth with the little Kanakas on his father’s plantation, and had preferred their language and would learn no other. The family removed to America a month after I arrived in the islands, and straightway the boy began to lose his Kanaka and pick up English. By the time he was twelve he hadn’t a word of Kanaka left; the language had wholly departed from his tongue and from his comprehension. Nine years later, when he was twenty-one, I came upon the family in one of the lake towns of New York, and the mother told me about an adventure which her son had been having. By trade he was now a professional diver. A passenger boat had been caught in a storm on the lake, and had gone down, carrying her people with her. A few days later the young diver descended, with his armor on, and entered the berth-saloon of the boat, and stood at the foot of the companionway, with his hand on the rail, peering through the dim water. Presently something touched him on the shoulder, and he turned and found a dead man swaying and bobbing about him and seemingly inspecting him inquiringly. He was paralyzed with fright.</p>
+                    <p>His entry had disturbed the water, and now he discerned a number of dim corpses making for him and wagging their heads and swaying their bodies like sleepy people trying to dance. His senses forsook him, and in that condition he was drawn to the surface. He was put to bed at home, and was soon very ill. During some days he had seasons of delirium which lasted several hours at a time; and while they lasted he talked Kanaka incessantly and glibly; and Kanaka only. He was still very ill, and he talked to me in that tongue; but I did not understand it, of course. The doctor-books tell us that cases like this are not uncommon. Then the doctors ought to study the cases and find out how to multiply them. Many languages and things get mislaid in a person’s head, and stay mislaid for lack of this remedy.</p>
+                    <p>Several of our passengers belonged in Honolulu, and these were sent ashore; but nobody could go ashore and return. There were people on shore who were booked to go with us to Australia, but we could not receive them; to do it would cost us a quarantine-term in Sydney. They could have escaped the day before, by ship to San Francisco; but the bars had been put up, now, and they might have to wait weeks before any ship could venture to give them a passage any whither. And there were hardships for others. An elderly lady and her son, recreation-seekers from Massachusetts, had wandered westward, further and further from home, always intending to take the return track, but always concluding to go still a little further; and now here they were at anchor before Honolulu positively their last westward-bound indulgence—they had made up their minds to that—but where is the use in making up your mind in this world? It is usually a waste of time to do it. These two would have to stay with us as far as Australia. Then they could go on around the world, or go back the way they had come; the distance and the accommodations and outlay of time would be just the same, whichever of the two routes they might elect to take. Think of it: a projected excursion of five hundred miles gradually enlarged, without any elaborate degree of intention, to a possible twenty-four thousand. However, they were used to extensions by this time, and did not mind this new one much.</p>
+                  </div>
+                </div><!-- /content__item -->
+                <div class="content__item">
+                  <div class="content__item-intro">
+                    <img class="content__item-img" src="https://drscdn.500px.org/photo/263671013/q%3D80_m%3D2000_k%3D1/v2?user_id=26368717&webp=true&sig=b9a81c254cfa6384a5820ce747fd723327f667561ba951b22ba3548c5784f847" alt="Paradise cave" />
+                    <h2 class="content__item-title">Paradise cave</h2>
+                  </div>
+                  <h3 class="content__item-subtitle">"How I learned to cherish life after a trip to hell"</h3>
+                  <div class="content__item-text">
+                    <p>When I was in the islands nearly a generation ago, I was acquainted with a young American couple who had among their belongings an attractive little son of the age of seven—attractive but not practicably companionable with me, because he knew no English. He had played from his birth with the little Kanakas on his father’s plantation, and had preferred their language and would learn no other. The family removed to America a month after I arrived in the islands, and straightway the boy began to lose his Kanaka and pick up English. By the time he was twelve he hadn’t a word of Kanaka left; the language had wholly departed from his tongue and from his comprehension. Nine years later, when he was twenty-one, I came upon the family in one of the lake towns of New York, and the mother told me about an adventure which her son had been having. By trade he was now a professional diver. A passenger boat had been caught in a storm on the lake, and had gone down, carrying her people with her. A few days later the young diver descended, with his armor on, and entered the berth-saloon of the boat, and stood at the foot of the companionway, with his hand on the rail, peering through the dim water. Presently something touched him on the shoulder, and he turned and found a dead man swaying and bobbing about him and seemingly inspecting him inquiringly. He was paralyzed with fright.</p>
+                    <p>His entry had disturbed the water, and now he discerned a number of dim corpses making for him and wagging their heads and swaying their bodies like sleepy people trying to dance. His senses forsook him, and in that condition he was drawn to the surface. He was put to bed at home, and was soon very ill. During some days he had seasons of delirium which lasted several hours at a time; and while they lasted he talked Kanaka incessantly and glibly; and Kanaka only. He was still very ill, and he talked to me in that tongue; but I did not understand it, of course. The doctor-books tell us that cases like this are not uncommon. Then the doctors ought to study the cases and find out how to multiply them. Many languages and things get mislaid in a person’s head, and stay mislaid for lack of this remedy.</p>
+                    <p>Several of our passengers belonged in Honolulu, and these were sent ashore; but nobody could go ashore and return. There were people on shore who were booked to go with us to Australia, but we could not receive them; to do it would cost us a quarantine-term in Sydney. They could have escaped the day before, by ship to San Francisco; but the bars had been put up, now, and they might have to wait weeks before any ship could venture to give them a passage any whither. And there were hardships for others. An elderly lady and her son, recreation-seekers from Massachusetts, had wandered westward, further and further from home, always intending to take the return track, but always concluding to go still a little further; and now here they were at anchor before Honolulu positively their last westward-bound indulgence—they had made up their minds to that—but where is the use in making up your mind in this world? It is usually a waste of time to do it. These two would have to stay with us as far as Australia. Then they could go on around the world, or go back the way they had come; the distance and the accommodations and outlay of time would be just the same, whichever of the two routes they might elect to take. Think of it: a projected excursion of five hundred miles gradually enlarged, without any elaborate degree of intention, to a possible twenty-four thousand. However, they were used to extensions by this time, and did not mind this new one much.</p>
+                  </div>
+                </div><!-- /content__item -->
+                <div class="content__item">
+                  <div class="content__item-intro">
+                    <img class="content__item-img" src="https://drscdn.500px.org/photo/271206537/q%3D80_m%3D2000/v2?user_id=26368717&webp=true&sig=da6b00b590ba2ac981c941dbff8218d87c7c92b91e7967d00d069fda834df6b3" alt="Ho Quoc Pagoda" />
+                    <h2 class="content__item-title">Ho Quoc Pagoda</h2>
+                  </div>
+                  <h3 class="content__item-subtitle">"How I learned to cherish life after a trip to hell"</h3>
+                  <div class="content__item-text">
+                    <p>When I was in the islands nearly a generation ago, I was acquainted with a young American couple who had among their belongings an attractive little son of the age of seven—attractive but not practicably companionable with me, because he knew no English. He had played from his birth with the little Kanakas on his father’s plantation, and had preferred their language and would learn no other. The family removed to America a month after I arrived in the islands, and straightway the boy began to lose his Kanaka and pick up English. By the time he was twelve he hadn’t a word of Kanaka left; the language had wholly departed from his tongue and from his comprehension. Nine years later, when he was twenty-one, I came upon the family in one of the lake towns of New York, and the mother told me about an adventure which her son had been having. By trade he was now a professional diver. A passenger boat had been caught in a storm on the lake, and had gone down, carrying her people with her. A few days later the young diver descended, with his armor on, and entered the berth-saloon of the boat, and stood at the foot of the companionway, with his hand on the rail, peering through the dim water. Presently something touched him on the shoulder, and he turned and found a dead man swaying and bobbing about him and seemingly inspecting him inquiringly. He was paralyzed with fright.</p>
+                    <p>His entry had disturbed the water, and now he discerned a number of dim corpses making for him and wagging their heads and swaying their bodies like sleepy people trying to dance. His senses forsook him, and in that condition he was drawn to the surface. He was put to bed at home, and was soon very ill. During some days he had seasons of delirium which lasted several hours at a time; and while they lasted he talked Kanaka incessantly and glibly; and Kanaka only. He was still very ill, and he talked to me in that tongue; but I did not understand it, of course. The doctor-books tell us that cases like this are not uncommon. Then the doctors ought to study the cases and find out how to multiply them. Many languages and things get mislaid in a person’s head, and stay mislaid for lack of this remedy.</p>
+                    <p>Several of our passengers belonged in Honolulu, and these were sent ashore; but nobody could go ashore and return. There were people on shore who were booked to go with us to Australia, but we could not receive them; to do it would cost us a quarantine-term in Sydney. They could have escaped the day before, by ship to San Francisco; but the bars had been put up, now, and they might have to wait weeks before any ship could venture to give them a passage any whither. And there were hardships for others. An elderly lady and her son, recreation-seekers from Massachusetts, had wandered westward, further and further from home, always intending to take the return track, but always concluding to go still a little further; and now here they were at anchor before Honolulu positively their last westward-bound indulgence—they had made up their minds to that—but where is the use in making up your mind in this world? It is usually a waste of time to do it. These two would have to stay with us as far as Australia. Then they could go on around the world, or go back the way they had come; the distance and the accommodations and outlay of time would be just the same, whichever of the two routes they might elect to take. Think of it: a projected excursion of five hundred miles gradually enlarged, without any elaborate degree of intention, to a possible twenty-four thousand. However, they were used to extensions by this time, and did not mind this new one much.</p>
+                  </div>
+                </div><!-- /content__item -->
+                <div class="content__item">
+                  <div class="content__item-intro">
+                    <img class="content__item-img" src="https://drscdn.500px.org/photo/255909745/q%3D80_m%3D2000_k%3D1/v2?user_id=26368717&webp=true&sig=8f5c30d7b36e551b1f04c08175be5109e37a1aeb60d1ef1921de3807d4c981d5" alt="Marina Bay" />
+                    <h2 class="content__item-title">Marina Bay</h2>
+                  </div>
+                  <h3 class="content__item-subtitle">"How I learned to cherish life after a trip to hell"</h3>
+                  <div class="content__item-text">
+                    <p>When I was in the islands nearly a generation ago, I was acquainted with a young American couple who had among their belongings an attractive little son of the age of seven—attractive but not practicably companionable with me, because he knew no English. He had played from his birth with the little Kanakas on his father’s plantation, and had preferred their language and would learn no other. The family removed to America a month after I arrived in the islands, and straightway the boy began to lose his Kanaka and pick up English. By the time he was twelve he hadn’t a word of Kanaka left; the language had wholly departed from his tongue and from his comprehension. Nine years later, when he was twenty-one, I came upon the family in one of the lake towns of New York, and the mother told me about an adventure which her son had been having. By trade he was now a professional diver. A passenger boat had been caught in a storm on the lake, and had gone down, carrying her people with her. A few days later the young diver descended, with his armor on, and entered the berth-saloon of the boat, and stood at the foot of the companionway, with his hand on the rail, peering through the dim water. Presently something touched him on the shoulder, and he turned and found a dead man swaying and bobbing about him and seemingly inspecting him inquiringly. He was paralyzed with fright.</p>
+                    <p>His entry had disturbed the water, and now he discerned a number of dim corpses making for him and wagging their heads and swaying their bodies like sleepy people trying to dance. His senses forsook him, and in that condition he was drawn to the surface. He was put to bed at home, and was soon very ill. During some days he had seasons of delirium which lasted several hours at a time; and while they lasted he talked Kanaka incessantly and glibly; and Kanaka only. He was still very ill, and he talked to me in that tongue; but I did not understand it, of course. The doctor-books tell us that cases like this are not uncommon. Then the doctors ought to study the cases and find out how to multiply them. Many languages and things get mislaid in a person’s head, and stay mislaid for lack of this remedy.</p>
+                    <p>Several of our passengers belonged in Honolulu, and these were sent ashore; but nobody could go ashore and return. There were people on shore who were booked to go with us to Australia, but we could not receive them; to do it would cost us a quarantine-term in Sydney. They could have escaped the day before, by ship to San Francisco; but the bars had been put up, now, and they might have to wait weeks before any ship could venture to give them a passage any whither. And there were hardships for others. An elderly lady and her son, recreation-seekers from Massachusetts, had wandered westward, further and further from home, always intending to take the return track, but always concluding to go still a little further; and now here they were at anchor before Honolulu positively their last westward-bound indulgence—they had made up their minds to that—but where is the use in making up your mind in this world? It is usually a waste of time to do it. These two would have to stay with us as far as Australia. Then they could go on around the world, or go back the way they had come; the distance and the accommodations and outlay of time would be just the same, whichever of the two routes they might elect to take. Think of it: a projected excursion of five hundred miles gradually enlarged, without any elaborate degree of intention, to a possible twenty-four thousand. However, they were used to extensions by this time, and did not mind this new one much.</p>
+                  </div>
+                </div><!-- /content__item -->
+                <div class="content__item">
+                  <div class="content__item-intro">
+                    <img class="content__item-img" src="assets/img/42395776_10214739794303327_9156442414724939776_n.jpg" alt="Above the cloud" />
+                    <h2 class="content__item-title">Above the cloud</h2>
+                  </div>
+                  <h3 class="content__item-subtitle">"How I learned to cherish life after a trip to hell"</h3>
+                  <div class="content__item-text">
+                    <p>When I was in the islands nearly a generation ago, I was acquainted with a young American couple who had among their belongings an attractive little son of the age of seven—attractive but not practicably companionable with me, because he knew no English. He had played from his birth with the little Kanakas on his father’s plantation, and had preferred their language and would learn no other. The family removed to America a month after I arrived in the islands, and straightway the boy began to lose his Kanaka and pick up English. By the time he was twelve he hadn’t a word of Kanaka left; the language had wholly departed from his tongue and from his comprehension. Nine years later, when he was twenty-one, I came upon the family in one of the lake towns of New York, and the mother told me about an adventure which her son had been having. By trade he was now a professional diver. A passenger boat had been caught in a storm on the lake, and had gone down, carrying her people with her. A few days later the young diver descended, with his armor on, and entered the berth-saloon of the boat, and stood at the foot of the companionway, with his hand on the rail, peering through the dim water. Presently something touched him on the shoulder, and he turned and found a dead man swaying and bobbing about him and seemingly inspecting him inquiringly. He was paralyzed with fright.</p>
+                    <p>His entry had disturbed the water, and now he discerned a number of dim corpses making for him and wagging their heads and swaying their bodies like sleepy people trying to dance. His senses forsook him, and in that condition he was drawn to the surface. He was put to bed at home, and was soon very ill. During some days he had seasons of delirium which lasted several hours at a time; and while they lasted he talked Kanaka incessantly and glibly; and Kanaka only. He was still very ill, and he talked to me in that tongue; but I did not understand it, of course. The doctor-books tell us that cases like this are not uncommon. Then the doctors ought to study the cases and find out how to multiply them. Many languages and things get mislaid in a person’s head, and stay mislaid for lack of this remedy.</p>
+                    <p>Several of our passengers belonged in Honolulu, and these were sent ashore; but nobody could go ashore and return. There were people on shore who were booked to go with us to Australia, but we could not receive them; to do it would cost us a quarantine-term in Sydney. They could have escaped the day before, by ship to San Francisco; but the bars had been put up, now, and they might have to wait weeks before any ship could venture to give them a passage any whither. And there were hardships for others. An elderly lady and her son, recreation-seekers from Massachusetts, had wandered westward, further and further from home, always intending to take the return track, but always concluding to go still a little further; and now here they were at anchor before Honolulu positively their last westward-bound indulgence—they had made up their minds to that—but where is the use in making up your mind in this world? It is usually a waste of time to do it. These two would have to stay with us as far as Australia. Then they could go on around the world, or go back the way they had come; the distance and the accommodations and outlay of time would be just the same, whichever of the two routes they might elect to take. Think of it: a projected excursion of five hundred miles gradually enlarged, without any elaborate degree of intention, to a possible twenty-four thousand. However, they were used to extensions by this time, and did not mind this new one much.</p>
+                  </div>
+                </div><!-- /content__item -->
+                <div class="content__item">
+                  <div class="content__item-intro">
+                    <img class="content__item-img" src="assets/img/Y5VJEbsaS9WpjiiCgJKmpg_thumb_2e5.jpg" alt="Where a dream came true" />
+                    <h2 class="content__item-title">Where a dream came true</h2>
+                  </div>
+                  <h3 class="content__item-subtitle">"How I learned to cherish life after a trip to hell"</h3>
+                  <div class="content__item-text">
+                    <p>When I was in the islands nearly a generation ago, I was acquainted with a young American couple who had among their belongings an attractive little son of the age of seven—attractive but not practicably companionable with me, because he knew no English. He had played from his birth with the little Kanakas on his father’s plantation, and had preferred their language and would learn no other. The family removed to America a month after I arrived in the islands, and straightway the boy began to lose his Kanaka and pick up English. By the time he was twelve he hadn’t a word of Kanaka left; the language had wholly departed from his tongue and from his comprehension. Nine years later, when he was twenty-one, I came upon the family in one of the lake towns of New York, and the mother told me about an adventure which her son had been having. By trade he was now a professional diver. A passenger boat had been caught in a storm on the lake, and had gone down, carrying her people with her. A few days later the young diver descended, with his armor on, and entered the berth-saloon of the boat, and stood at the foot of the companionway, with his hand on the rail, peering through the dim water. Presently something touched him on the shoulder, and he turned and found a dead man swaying and bobbing about him and seemingly inspecting him inquiringly. He was paralyzed with fright.</p>
+                    <p>His entry had disturbed the water, and now he discerned a number of dim corpses making for him and wagging their heads and swaying their bodies like sleepy people trying to dance. His senses forsook him, and in that condition he was drawn to the surface. He was put to bed at home, and was soon very ill. During some days he had seasons of delirium which lasted several hours at a time; and while they lasted he talked Kanaka incessantly and glibly; and Kanaka only. He was still very ill, and he talked to me in that tongue; but I did not understand it, of course. The doctor-books tell us that cases like this are not uncommon. Then the doctors ought to study the cases and find out how to multiply them. Many languages and things get mislaid in a person’s head, and stay mislaid for lack of this remedy.</p>
+                    <p>Several of our passengers belonged in Honolulu, and these were sent ashore; but nobody could go ashore and return. There were people on shore who were booked to go with us to Australia, but we could not receive them; to do it would cost us a quarantine-term in Sydney. They could have escaped the day before, by ship to San Francisco; but the bars had been put up, now, and they might have to wait weeks before any ship could venture to give them a passage any whither. And there were hardships for others. An elderly lady and her son, recreation-seekers from Massachusetts, had wandered westward, further and further from home, always intending to take the return track, but always concluding to go still a little further; and now here they were at anchor before Honolulu positively their last westward-bound indulgence—they had made up their minds to that—but where is the use in making up your mind in this world? It is usually a waste of time to do it. These two would have to stay with us as far as Australia. Then they could go on around the world, or go back the way they had come; the distance and the accommodations and outlay of time would be just the same, whichever of the two routes they might elect to take. Think of it: a projected excursion of five hundred miles gradually enlarged, without any elaborate degree of intention, to a possible twenty-four thousand. However, they were used to extensions by this time, and did not mind this new one much.</p>
+                  </div>
+                </div><!-- /content__item -->
+                <div class="content__item">
+                  <div class="content__item-intro">
+                    <img class="content__item-img" src="assets/img/20170910103901.jpg" alt="Sung Sot caves" />
+                    <h2 class="content__item-title">Sung Sot caves</h2>
+                  </div>
+                  <h3 class="content__item-subtitle">"How I learned to cherish life after a trip to hell"</h3>
+                  <div class="content__item-text">
+                    <p>When I was in the islands nearly a generation ago, I was acquainted with a young American couple who had among their belongings an attractive little son of the age of seven—attractive but not practicably companionable with me, because he knew no English. He had played from his birth with the little Kanakas on his father’s plantation, and had preferred their language and would learn no other. The family removed to America a month after I arrived in the islands, and straightway the boy began to lose his Kanaka and pick up English. By the time he was twelve he hadn’t a word of Kanaka left; the language had wholly departed from his tongue and from his comprehension. Nine years later, when he was twenty-one, I came upon the family in one of the lake towns of New York, and the mother told me about an adventure which her son had been having. By trade he was now a professional diver. A passenger boat had been caught in a storm on the lake, and had gone down, carrying her people with her. A few days later the young diver descended, with his armor on, and entered the berth-saloon of the boat, and stood at the foot of the companionway, with his hand on the rail, peering through the dim water. Presently something touched him on the shoulder, and he turned and found a dead man swaying and bobbing about him and seemingly inspecting him inquiringly. He was paralyzed with fright.</p>
+                    <p>His entry had disturbed the water, and now he discerned a number of dim corpses making for him and wagging their heads and swaying their bodies like sleepy people trying to dance. His senses forsook him, and in that condition he was drawn to the surface. He was put to bed at home, and was soon very ill. During some days he had seasons of delirium which lasted several hours at a time; and while they lasted he talked Kanaka incessantly and glibly; and Kanaka only. He was still very ill, and he talked to me in that tongue; but I did not understand it, of course. The doctor-books tell us that cases like this are not uncommon. Then the doctors ought to study the cases and find out how to multiply them. Many languages and things get mislaid in a person’s head, and stay mislaid for lack of this remedy.</p>
+                    <p>Several of our passengers belonged in Honolulu, and these were sent ashore; but nobody could go ashore and return. There were people on shore who were booked to go with us to Australia, but we could not receive them; to do it would cost us a quarantine-term in Sydney. They could have escaped the day before, by ship to San Francisco; but the bars had been put up, now, and they might have to wait weeks before any ship could venture to give them a passage any whither. And there were hardships for others. An elderly lady and her son, recreation-seekers from Massachusetts, had wandered westward, further and further from home, always intending to take the return track, but always concluding to go still a little further; and now here they were at anchor before Honolulu positively their last westward-bound indulgence—they had made up their minds to that—but where is the use in making up your mind in this world? It is usually a waste of time to do it. These two would have to stay with us as far as Australia. Then they could go on around the world, or go back the way they had come; the distance and the accommodations and outlay of time would be just the same, whichever of the two routes they might elect to take. Think of it: a projected excursion of five hundred miles gradually enlarged, without any elaborate degree of intention, to a possible twenty-four thousand. However, they were used to extensions by this time, and did not mind this new one much.</p>
+                  </div>
+                </div><!-- /content__item -->
+                <div class="content__item">
+                  <div class="content__item-intro">
+                    <img class="content__item-img" src="assets/img/iC64XeAFRRiERs.jpg" alt="A tour with fam" />
+                    <h2 class="content__item-title">A tour with fam</h2>
+                  </div>
+                  <h3 class="content__item-subtitle">"How I learned to cherish life after a trip to hell"</h3>
+                  <div class="content__item-text">
+                    <p>When I was in the islands nearly a generation ago, I was acquainted with a young American couple who had among their belongings an attractive little son of the age of seven—attractive but not practicably companionable with me, because he knew no English. He had played from his birth with the little Kanakas on his father’s plantation, and had preferred their language and would learn no other. The family removed to America a month after I arrived in the islands, and straightway the boy began to lose his Kanaka and pick up English. By the time he was twelve he hadn’t a word of Kanaka left; the language had wholly departed from his tongue and from his comprehension. Nine years later, when he was twenty-one, I came upon the family in one of the lake towns of New York, and the mother told me about an adventure which her son had been having. By trade he was now a professional diver. A passenger boat had been caught in a storm on the lake, and had gone down, carrying her people with her. A few days later the young diver descended, with his armor on, and entered the berth-saloon of the boat, and stood at the foot of the companionway, with his hand on the rail, peering through the dim water. Presently something touched him on the shoulder, and he turned and found a dead man swaying and bobbing about him and seemingly inspecting him inquiringly. He was paralyzed with fright.</p>
+                    <p>His entry had disturbed the water, and now he discerned a number of dim corpses making for him and wagging their heads and swaying their bodies like sleepy people trying to dance. His senses forsook him, and in that condition he was drawn to the surface. He was put to bed at home, and was soon very ill. During some days he had seasons of delirium which lasted several hours at a time; and while they lasted he talked Kanaka incessantly and glibly; and Kanaka only. He was still very ill, and he talked to me in that tongue; but I did not understand it, of course. The doctor-books tell us that cases like this are not uncommon. Then the doctors ought to study the cases and find out how to multiply them. Many languages and things get mislaid in a person’s head, and stay mislaid for lack of this remedy.</p>
+                    <p>Several of our passengers belonged in Honolulu, and these were sent ashore; but nobody could go ashore and return. There were people on shore who were booked to go with us to Australia, but we could not receive them; to do it would cost us a quarantine-term in Sydney. They could have escaped the day before, by ship to San Francisco; but the bars had been put up, now, and they might have to wait weeks before any ship could venture to give them a passage any whither. And there were hardships for others. An elderly lady and her son, recreation-seekers from Massachusetts, had wandered westward, further and further from home, always intending to take the return track, but always concluding to go still a little further; and now here they were at anchor before Honolulu positively their last westward-bound indulgence—they had made up their minds to that—but where is the use in making up your mind in this world? It is usually a waste of time to do it. These two would have to stay with us as far as Australia. Then they could go on around the world, or go back the way they had come; the distance and the accommodations and outlay of time would be just the same, whichever of the two routes they might elect to take. Think of it: a projected excursion of five hundred miles gradually enlarged, without any elaborate degree of intention, to a possible twenty-four thousand. However, they were used to extensions by this time, and did not mind this new one much.</p>
+                  </div>
+                </div><!-- /content__item -->
+                <button class="content__close">Close</button>
+            
+                <svg class="content__indicator" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 30 30" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <use xlink:href="#chevron-down"></use>
+                </svg>
               </div>
-            </div>
-            <script type="text/javascript">
-            var prevScrollpos = window.pageYOffset;
-            window.onscroll = function() {
-            var currentScrollPos = window.pageYOffset;
-              if (prevScrollpos > currentScrollPos) {
-                document.getElementById("branding-menu").style.top = "0";
-              } else {
-                document.getElementById("branding-menu").style.top = "-200px";
-              }
-              prevScrollpos = currentScrollPos;
-            }
-            </script>
+            </section>
+            <script src="https://tympanus.net/Development/GridLayoutScrollableContent/js/imagesloaded.pkgd.min.js"></script>
+            <script src="https://tympanus.net/Development/GridLayoutScrollableContent/js/masonry.pkgd.min.js"></script>
+            <script src="https://tympanus.net/Development/GridLayoutScrollableContent/js/charming.min.js"></script>
+            <script src="https://tympanus.net/Development/GridLayoutScrollableContent/js/TweenMax.min.js"></script>
+            <script src="https://tympanus.net/Development/GridLayoutScrollableContent/js/demo.js"></script>
+            
           </div>
 
         </main>
